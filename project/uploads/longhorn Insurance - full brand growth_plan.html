@@ -1,0 +1,682 @@
+
+<h2 class="sr-only">Longhorn Insurance Brokers — Full Brand Growth Plan: Positioning, Channels, Funnels, Behavioural Framing and Growth Stages</h2>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+.w{font-family:var(--font-sans);padding:1.5rem 0}
+.nav-wrap{position:sticky;top:0;background:var(--color-background-primary);z-index:10;padding:.5rem 0 .75rem;border-bottom:0.5px solid var(--color-border-tertiary);margin-bottom:1.5rem}
+.nav{display:flex;gap:5px;flex-wrap:wrap}
+.nb{background:none;border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md);padding:5px 12px;font-size:12px;cursor:pointer;color:var(--color-text-secondary);transition:all .15s;font-family:var(--font-sans);white-space:nowrap}
+.nb:hover{background:var(--color-background-secondary)}
+.nb.on{background:var(--color-background-primary);border-color:var(--color-border-secondary);color:var(--color-text-primary);font-weight:500}
+.pg{display:none}.pg.on{display:block}
+
+/* Typography */
+.lbl{font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:.08em;color:var(--color-text-tertiary);margin-bottom:.5rem}
+.h1{font-size:21px;font-weight:500;color:var(--color-text-primary);line-height:1.35;margin-bottom:.55rem}
+.h2{font-size:15px;font-weight:500;color:var(--color-text-primary);margin-bottom:.3rem}
+.h3{font-size:13px;font-weight:500;color:var(--color-text-primary);margin-bottom:.2rem}
+.body{font-size:13px;color:var(--color-text-secondary);line-height:1.72}
+.small{font-size:11px;color:var(--color-text-tertiary);line-height:1.55}
+
+/* Cards */
+.card{background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:1.1rem;margin-bottom:.75rem}
+.ca{border-left:3px solid;border-radius:0 var(--border-radius-md) var(--border-radius-md) 0;padding:.8rem 1rem;margin-bottom:.65rem}
+.ca-r{border-color:#C8121E;background:var(--color-background-secondary)}
+.ca-n{border-color:#0A006E;background:var(--color-background-secondary)}
+.ca-g{border-color:#27500A;background:var(--color-background-secondary)}
+.ca-a{border-color:#BA7517;background:var(--color-background-secondary)}
+
+/* Grids */
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:.75rem}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:.75rem}
+
+/* Tags */
+.tag{display:inline-block;font-size:11px;padding:3px 8px;border-radius:20px;font-weight:500;margin:2px 3px 2px 0}
+.t-r{background:#FAEAEA;color:#C8121E}
+.t-n{background:#E6E5F7;color:#0A006E}
+.t-g{background:#EAF3DE;color:#27500A}
+.t-a{background:#FAEEDA;color:#633806}
+.t-gr{background:var(--color-background-secondary);color:var(--color-text-secondary)}
+
+/* Steps */
+.step{display:flex;gap:11px;margin-bottom:.75rem;align-items:flex-start}
+.snum{width:25px;height:25px;min-width:25px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:500;margin-top:2px}
+.sn-r{background:#FAEAEA;color:#C8121E}
+.sn-n{background:#E6E5F7;color:#0A006E}
+.sn-g{background:#EAF3DE;color:#27500A}
+.sn-a{background:#FAEEDA;color:#633806}
+
+/* Alert */
+.alert{border-radius:var(--border-radius-md);padding:.8rem 1rem;margin-bottom:.75rem;border:0.5px solid}
+.alert-r{background:#FAEAEA;border-color:#C8121E}
+.alert-n{background:#E6E5F7;border-color:#0A006E}
+.alert-g{background:#EAF3DE;border-color:#27500A}
+.alert p{font-size:13px;line-height:1.65}
+
+/* Divider */
+.div{height:.5px;background:var(--color-border-tertiary);margin:1.1rem 0}
+
+/* Funnel blocks */
+.fb{border-radius:var(--border-radius-md);padding:.7rem 1rem;margin-bottom:3px;display:grid;grid-template-columns:1fr auto;gap:8px;align-items:center}
+.fb-title{font-size:13px;font-weight:500;color:#fff;margin-bottom:1px}
+.fb-sub{font-size:11px;color:rgba(255,255,255,.75);line-height:1.45}
+.fb-kpi{font-size:11px;font-weight:500;color:rgba(255,255,255,.9);text-align:right;white-space:nowrap}
+
+/* Behaviour reframe table */
+.br-row{display:grid;grid-template-columns:1fr 1.4fr 1.1fr;gap:8px;padding:.6rem 0;border-bottom:.5px solid var(--color-border-tertiary);align-items:start}
+.br-row:last-child{border-bottom:none}
+.br-h{font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:.06em;color:var(--color-text-tertiary);padding:.4rem 0}
+.br-old{font-size:12px;color:var(--color-text-tertiary);font-style:italic}
+.br-new{font-size:12px;font-weight:500;color:var(--color-text-primary)}
+.br-why{font-size:11px;color:var(--color-text-secondary);line-height:1.5}
+
+/* Touchpoint grid */
+.tp-card{background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:.85rem}
+.tp-platform{font-size:11px;font-weight:500;letter-spacing:.04em;margin-bottom:.3rem}
+.tp-msg{font-size:12px;color:var(--color-text-secondary);line-height:1.55;margin-bottom:.4rem}
+.tp-action{font-size:11px;font-weight:500}
+
+/* Stage timeline */
+.stage-block{border-radius:var(--border-radius-lg);padding:1.1rem;margin-bottom:.85rem;border:0.5px solid var(--color-border-tertiary)}
+
+/* Metric cards */
+.mc{background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:.85rem}
+.mc .mv{font-size:18px;font-weight:500;color:var(--color-text-primary);margin-bottom:2px}
+.mc .ml{font-size:11px;color:var(--color-text-tertiary);line-height:1.4}
+
+@media(max-width:540px){.g2,.g3{grid-template-columns:1fr}.br-row{grid-template-columns:1fr 1fr}}
+</style>
+
+<div class="w">
+<div class="nav-wrap">
+  <div class="nav">
+    <button class="nb on" onclick="go('position',this)">Brand positioning</button>
+    <button class="nb" onclick="go('reframe',this)">Product reframing</button>
+    <button class="nb" onclick="go('linkedin',this)">LinkedIn</button>
+    <button class="nb" onclick="go('meta',this)">Facebook & Instagram</button>
+    <button class="nb" onclick="go('google',this)">Google Ads</button>
+    <button class="nb" onclick="go('whatsapp',this)">WhatsApp</button>
+    <button class="nb" onclick="go('behaviour',this)">Behavioural design</button>
+    <button class="nb" onclick="go('touchpoints',this)">All touchpoints</button>
+    <button class="nb" onclick="go('stages',this)">Growth stages</button>
+    <button class="nb" onclick="go('kpis',this)">KPIs</button>
+  </div>
+</div>
+
+<!-- ══════ BRAND POSITIONING ══════ -->
+<div id="p-position" class="pg on">
+  <div class="lbl">Brand positioning — the foundation of everything</div>
+  <div class="h1">Longhorn does not sell insurance.<br>It sells certainty.</div>
+  <p class="body" style="margin-bottom:1rem">This is the single most important strategic reframe in the entire plan. Insurance as a category is associated in the Zambian public mind with complexity, distrust, and disappointment. The moment Longhorn positions itself as selling insurance, it inherits all of that baggage. The moment it positions itself as selling certainty — the certainty that if something goes wrong, someone is already on your side — everything changes. The product is the same. The experience of the brand is entirely different.</p>
+
+  <div class="alert alert-n">
+    <p><strong>The core brand truth:</strong> Longhorn is the only type of financial services provider in Zambia that is structurally and legally required to work for the client, not the institution. Every insurer works for their shareholders. Every bank works for their balance sheet. Longhorn works for the person sitting across the table. That is not a marketing line. That is a legal and operational reality that no competitor can honestly claim. The entire brand is built on making that truth visible, credible, and human.</p>
+  </div>
+
+  <div class="lbl" style="margin-top:1rem">The positioning architecture</div>
+  <div class="g3">
+    <div class="card" style="border-top:3px solid #C8121E">
+      <div class="h2">Brand purpose</div>
+      <p class="body" style="margin-bottom:.5rem;font-style:italic;color:var(--color-text-primary)">"To make certain that when life goes wrong, it does not have to stay that way."</p>
+      <p class="body">This is not a tagline. It is the reason Longhorn exists. It frames the brand as a recovery mechanism — not a product purchase. Recovery is human. Recovery is emotional. Recovery is what people actually want when they think about why insurance matters.</p>
+    </div>
+    <div class="card" style="border-top:3px solid #0A006E">
+      <div class="h2">Brand promise</div>
+      <p class="body" style="margin-bottom:.5rem;font-style:italic;color:var(--color-text-primary)">"On your side. Always."</p>
+      <p class="body">The promise is unconditional. Not "on your side when things are simple" or "on your side until claims time." Always. This is a deliberate and provable standard — because the broker model structurally delivers on it. Independence is the mechanism. "Always" is the commitment.</p>
+    </div>
+    <div class="card" style="border-top:3px solid #27500A">
+      <div class="h2">Brand voice</div>
+      <p class="body">Plain. Direct. Human. Warm but not soft. The voice of someone who knows exactly what they are talking about and explains it without making you feel small for not knowing. Not corporate. Not technical. Not the voice of an insurer. The voice of a trusted friend who happens to be an expert.</p>
+      <div style="margin-top:.5rem"><span class="tag t-gr">Plain English always</span><span class="tag t-gr">No jargon</span><span class="tag t-gr">First person where possible</span><span class="tag t-gr">Never condescending</span></div>
+    </div>
+  </div>
+
+  <div class="lbl">The three audience segments — different messages, same brand truth</div>
+  <div class="g3">
+    <div class="card">
+      <span class="tag t-n" style="margin-bottom:.5rem;display:inline-block">Segment A</span>
+      <div class="h2">Corporate decision-makers</div>
+      <p class="body" style="margin-bottom:.4rem">HR managers, CFOs, procurement heads, and business owners at companies of 20 or more employees in Lusaka. They have existing cover. They are not satisfied with it but do not know what good looks like. They value professionalism, responsiveness, and a single point of contact who understands their business.</p>
+      <p class="small"><strong>Their core fear:</strong> Something goes wrong and the cover does not pay. They are responsible. Their career or reputation is at risk.</p>
+      <p class="small" style="margin-top:.25rem"><strong>What moves them:</strong> Evidence that Longhorn fights for clients at claims time. Not features. Outcomes.</p>
+    </div>
+    <div class="card">
+      <span class="tag t-r" style="margin-bottom:.5rem;display:inline-block">Segment B</span>
+      <div class="h2">SME owners and self-employed professionals</div>
+      <p class="body" style="margin-bottom:.4rem">Business owners with 1–20 staff, freelancers, contractors, and traders in Lusaka. Chronically underinsured because they believe insurance is either too expensive or too complicated to be worth it. They make decisions based on relationships and word of mouth.</p>
+      <p class="small"><strong>Their core fear:</strong> One bad event — a fire, a theft, an accident — wipes out everything they have built. They know it is possible. They prefer not to think about it.</p>
+      <p class="small" style="margin-top:.25rem"><strong>What moves them:</strong> A specific, local story of an SME owner whose cover worked. And a price that is lower than they assumed.</p>
+    </div>
+    <div class="card">
+      <span class="tag t-a" style="margin-bottom:.5rem;display:inline-block">Segment C</span>
+      <div class="h2">Urban professionals and households</div>
+      <p class="body" style="margin-bottom:.4rem">Employed Lusaka residents aged 25–45 with motor, home, or life insurance needs. They may already have a policy — probably bundled through a bank or employer — and have no idea what it actually covers. They are digitally active, value-conscious, and open to being educated.</p>
+      <p class="small"><strong>Their core fear:</strong> They are paying for something they do not understand and will not receive when they need it.</p>
+      <p class="small" style="margin-top:.25rem"><strong>What moves them:</strong> Clarity. "Here is exactly what your policy covers. Here is what it does not. Here is what you are missing." Simple, specific, honest.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══════ PRODUCT REFRAMING ══════ -->
+<div id="p-reframe" class="pg">
+  <div class="lbl">Behavioural product reframing</div>
+  <div class="h1">Stop selling insurance products.<br>Start selling what they actually do for people.</div>
+  <p class="body" style="margin-bottom:1rem">Insurance product names and descriptions are built for regulators and actuaries, not for the human beings who need them. Every product needs to be translated into the language of the outcome it delivers — using behavioural science principles to frame it in the way that actually motivates people to act. The product does not change. The way it is perceived and described changes everything.</p>
+
+  <div class="alert alert-r">
+    <p><strong>Behavioural principle at work — Loss Aversion + Concrete Imagery:</strong> People are more motivated by specific, vivid losses than by abstract gains. "Motor insurance" triggers nothing. "The policy that means your family does not lose the car if you are in an accident on the Great East Road" triggers a specific mental image, a specific person, a specific fear, and a specific relief. The product description that paints a picture outperforms the product description that lists features every time.</p>
+  </div>
+
+  <div class="lbl" style="margin-top:.75rem">Product-by-product behavioural reframe</div>
+  <div class="card">
+    <div class="br-row br-h"><div>Product</div><div>Longhorn reframe</div><div>Behavioural mechanism</div></div>
+    <div class="br-row">
+      <div><div class="h3">Motor insurance</div><div class="br-old">Third party, comprehensive cover</div></div>
+      <div><div class="br-new">"Your car is how you earn. Protect what keeps you moving."</div><p class="body" style="margin-top:3px;font-size:12px">Content frame: show the Lusaka professional whose income stops the day their car is undriveable and they cannot afford repairs without cover.</p></div>
+      <div><div class="br-why">Loss aversion. The car is not a luxury — it is productive capacity. Frame its loss as income loss, not property loss.</div></div>
+    </div>
+    <div class="br-row">
+      <div><div class="h3">Business/fire cover</div><div class="br-old">Commercial property, fire and perils</div></div>
+      <div><div class="br-new">"You spent years building this. One night should not end it."</div><p class="body" style="margin-top:3px;font-size:12px">Content frame: document a real Lusaka SME story. Fire. Claim paid. Business recovered. The difference between a closed chapter and a setback.</p></div>
+      <div><div class="br-why">Concrete imagery and social proof. Abstract risk statistics do not move SME owners. A specific building, a specific fire, a specific recovery does.</div></div>
+    </div>
+    <div class="br-row">
+      <div><div class="h3">Group life / employee cover</div><div class="br-old">Group life assurance, funeral benefits</div></div>
+      <div><div class="br-new">"The benefit that tells your team: we will not abandon your family."</div><p class="body" style="margin-top:3px;font-size:12px">Content frame: the HR manager who uses group life as a retention and recruitment tool. "Candidates ask about this now. It is no longer optional."</p></div>
+      <div><div class="br-why">Social proof + identity signalling. Reframes from welfare cost to leadership signal. The employer who offers this is the employer people want to work for.</div></div>
+    </div>
+    <div class="br-row">
+      <div><div class="h3">Medical / health cover</div><div class="br-old">Medical aid, health insurance</div></div>
+      <div><div class="br-new">"The choice of which hospital your family goes to — not which one you can afford."</div><p class="body" style="margin-top:3px;font-size:12px">Content frame: side-by-side comparison of what the same condition costs at UTH versus a private clinic. What the gap is. What cover fills it.</p></div>
+      <div><div class="br-why">Concrete comparison + perceived control. People will pay for choice. Frame medical cover as the thing that gives you a choice you would not otherwise have.</div></div>
+    </div>
+    <div class="br-row">
+      <div><div class="h3">Home / household cover</div><div class="br-old">Household contents, building insurance</div></div>
+      <div><div class="br-new">"Everything inside that door that took years to build. Covered for less than K 500 a month."</div><p class="body" style="margin-top:3px;font-size:12px">Content frame: the "K 500 question" — what does K 500 a month mean to you? One meal out. Three airtime top-ups. Or: the cover that replaces your refrigerator, your television, and your laptop if your home is broken into tonight.</p></div>
+      <div><div class="br-why">Anchoring + loss framing. The comparison to trivial monthly spend anchors the premium as negligible. The loss inventory makes the risk concrete and personal.</div></div>
+    </div>
+    <div class="br-row">
+      <div><div class="h3">Liability cover</div><div class="br-old">Public liability, professional indemnity</div></div>
+      <div><div class="br-new">"The cover that means one mistake does not cost you everything you own."</div><p class="body" style="margin-top:3px;font-size:12px">Content frame: the professional or contractor whose one error — a client injury, a project failure — turns into a legal claim. Without liability cover, their personal assets are at risk. With it, the claim is contained.</p></div>
+      <div><div class="br-why">Worst-case vivid scenario. Liability risk is invisible until it is not. Making the worst-case scenario specific and real is the only communication that breaks through professional optimism bias.</div></div>
+    </div>
+  </div>
+
+  <div class="lbl" style="margin-top:.5rem">The reframe applied to campaign language</div>
+  <div class="g2">
+    <div class="ca ca-r">
+      <div class="h3" style="color:#C8121E">Never say this</div>
+      <p class="body" style="margin-top:4px">"Get your free motor insurance quote today." "Comprehensive cover at competitive rates." "Protect your assets." "Trusted insurance solutions." "Your peace of mind is our priority."</p>
+      <p class="small" style="margin-top:.4rem">These are category-generic and trusted by nobody. They describe the product. They do not describe what the product does for a human life in a moment of crisis.</p>
+    </div>
+    <div class="ca ca-n">
+      <div class="h3" style="color:#0A006E">Say this instead</div>
+      <p class="body" style="margin-top:4px">"Your car is how you earn. We make sure one accident does not stop you." "Mwamba's workshop burned down. By the end of the week, Longhorn had lodged the claim." "You built this business. One night should not end it." "We compared 22 insurers to find you a better deal than the one you have."</p>
+      <p class="small" style="margin-top:.4rem">Specific. Human. Outcome-focused. These do not describe insurance. They describe the difference Longhorn makes in a person's actual life.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══════ LINKEDIN ══════ -->
+<div id="p-linkedin" class="pg">
+  <div class="lbl">LinkedIn — B2B decision-maker acquisition</div>
+  <div class="h1">LinkedIn is not for awareness.<br>It is for getting in front of the person who signs the contract.</div>
+  <p class="body" style="margin-bottom:1rem">LinkedIn is the only platform in the world where you can target a specific job title, at a specific company size, in a specific industry, in a specific city, and put a professional message directly in front of that person. For Longhorn, that means the HR Manager at a Lusaka company of 50 people, the CFO of a construction firm, the founder of a logistics business. The people who decide which insurance broker the company uses. No other channel reaches them this precisely.</p>
+
+  <div class="lbl">LinkedIn funnel — five stages, one outcome</div>
+
+  <div class="fb" style="background:#0A006E">
+    <div><div class="fb-title">Stage 1 — Authority building (organic)</div><div class="fb-sub">Leadership team posts on their personal profiles. Not the company page. Named individuals build credibility. Company page shares and amplifies. Target: 3 posts per week across the leadership team combined.</div></div>
+    <div class="fb-kpi">Owned. Free.</div>
+  </div>
+  <div style="width:2px;height:5px;background:#0A006E;margin-left:16px"></div>
+  <div class="fb" style="background:#1A108A">
+    <div><div class="fb-title">Stage 2 — Thought leadership content reaches target audience</div><div class="fb-sub">Posts on: Zambia's insurance gap and what it costs businesses. How SMEs are underprotected. What the PIA's new frameworks mean. Risk management for construction, logistics, retail. Posts are shared, saved, and followed. The algorithm shows them to people who match the engagement profile.</div></div>
+    <div class="fb-kpi">Organic reach builds</div>
+  </div>
+  <div style="width:2px;height:5px;background:#1A108A;margin-left:28px"></div>
+  <div class="fb" style="background:#2A1880">
+    <div><div class="fb-title">Stage 3 — LinkedIn Lead Gen campaigns (paid)</div><div class="fb-sub">Targeted campaigns using LinkedIn's Lead Gen Form ads. Targeting: Job titles (HR Manager, CFO, Finance Director, Operations Manager, MD/Founder). Industry: Construction, Logistics, Retail, Professional Services. Company size: 20–500 employees. Location: Lusaka. Lead magnet: "Free business risk audit — find out what your current cover is missing."</div></div>
+    <div class="fb-kpi">Paid. High CPL. High quality.</div>
+  </div>
+  <div style="width:2px;height:5px;background:#2A1880;margin-left:40px"></div>
+  <div class="fb" style="background:#C8121E">
+    <div><div class="fb-title">Stage 4 — Lead enters CRM. Immediate structured follow-up.</div><div class="fb-sub">LinkedIn Lead Gen Form submission triggers: automatic email with the risk audit document, WhatsApp message within 2 hours ("Hi [name], your free business risk audit is attached. Our broker will call you tomorrow at [time] — does that work?"). Broker calls within 24 hours with the CRM brief already prepared.</div></div>
+    <div class="fb-kpi">SLA: 2hr WhatsApp. 24hr call.</div>
+  </div>
+  <div style="width:2px;height:5px;background:#C8121E;margin-left:52px"></div>
+  <div class="fb" style="background:#8B0A16">
+    <div><div class="fb-title">Stage 5 — Consultation, audit, quote, policy</div><div class="fb-sub">Broker delivers the risk audit findings in the consultation call. Not a pitch — a diagnosis. "Here is what we found. Here is what you are exposed to. Here is what Longhorn would recommend and why." Quote follows within 48 hours. Follow-up at day 3, day 5, day 10.</div></div>
+    <div class="fb-kpi">Longhorn broker owns</div>
+  </div>
+
+  <div class="div"></div>
+  <div class="lbl">LinkedIn content architecture — what to post and why</div>
+  <div class="g2">
+    <div class="card">
+      <div class="h2">Personal profiles (leadership team)</div>
+      <div class="step"><div class="snum sn-n">1</div><div><div class="h3">The professional story post</div><p class="body">"Eight years as an insurance broker in Zambia. Here is the claim story that changed how I work." Personal narrative. High engagement. Builds human trust in the individual before the brand.</p></div></div>
+      <div class="step"><div class="snum sn-r">2</div><div><div class="h3">The industry insight post</div><p class="body">"The PIA's new risk-based capital framework changes everything for SMEs. Here is what it means and what to do." Demonstrates expertise. Gets shared in professional networks. Positions as the credible voice on Zambia insurance.</p></div></div>
+      <div class="step"><div class="snum sn-n">3</div><div><div class="h3">The client outcome post</div><p class="body">"A client's warehouse fire. A rejected claim from their previous insurer. What happened when they came to us." Social proof at a professional level. Proves the broker value proposition with a real outcome.</p></div></div>
+      <div class="step"><div class="snum sn-r">4</div><div><div class="h3">The question post</div><p class="body">"Quick question for Lusaka business owners: have you ever actually read your commercial fire policy? What you find might surprise you." Comment bait. Generates engagement, extends reach, surfaces warm prospects who respond.</p></div></div>
+    </div>
+    <div class="card">
+      <div class="h2">Company page (Longhorn Insurance Brokers)</div>
+      <div class="step"><div class="snum sn-g">1</div><div><div class="h3">Amplify leadership posts</div><p class="body">Share and comment on every team member's post from the company page within two hours of it being published. This extends reach to the company's followers and signals active, engaged leadership.</p></div></div>
+      <div class="step"><div class="snum sn-a">2</div><div><div class="h3">Product explainers</div><p class="body">Carousel posts: "What group life insurance actually covers — and what it does not." Simple. Visual. Shareable by HR professionals to their own networks as a resource.</p></div></div>
+      <div class="step"><div class="snum sn-g">3</div><div><div class="h3">Industry news commentary</div><p class="body">When relevant regulatory or economic news drops — PIA announcements, budget implications for business insurance, major claim events in the market — Longhorn's company page is the first to comment in plain language. First mover = credible voice.</p></div></div>
+      <div class="step"><div class="snum sn-a">4</div><div><div class="h3">Hiring and culture posts</div><p class="body">As the team grows, hiring posts and team milestone posts build credibility and signal that Longhorn is a real, growing business — not a one-person operation. Institutional confidence matters for corporate buyers.</p></div></div>
+    </div>
+  </div>
+
+  <div class="div"></div>
+  <div class="lbl">LinkedIn paid campaign structure</div>
+  <div class="g3">
+    <div class="card">
+      <span class="tag t-n">Campaign 1</span>
+      <div class="h2" style="margin-top:.4rem">Business Risk Audit</div>
+      <p class="body">Objective: Lead Gen. Format: Single image with Lead Gen Form. Target: HR Managers and CFOs, Lusaka, company size 20–200. Offer: "Free 20-minute business risk audit. Find out what your current cover is missing." CTA: "Claim your free audit." Budget: K 3,000–5,000/month. Expected CPL: K 400–800.</p>
+    </div>
+    <div class="card">
+      <span class="tag t-r">Campaign 2</span>
+      <div class="h2" style="margin-top:.4rem">Retarget website visitors</div>
+      <p class="body">Objective: Conversion. Format: Message Ad (LinkedIn InMail). Target: People who visited Longhorn's website in the last 30 days who are LinkedIn members. Message: personalised, from the broker's profile, not the company. "I noticed you visited our site — happy to answer any questions directly." Budget: K 1,500–2,500/month.</p>
+    </div>
+    <div class="card">
+      <span class="tag t-g">Campaign 3</span>
+      <div class="h2" style="margin-top:.4rem">Thought leadership amplification</div>
+      <p class="body">Objective: Awareness and follower growth. Format: Boost best-performing organic posts. Target: Broader professional Lusaka audience + lookalike from engaged followers. Budget: K 1,000–2,000/month. Purpose: build the authority foundation that makes the Lead Gen campaigns more effective over time.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══════ FACEBOOK & INSTAGRAM ══════ -->
+<div id="p-meta" class="pg">
+  <div class="lbl">Facebook and Instagram — retail and trust engine</div>
+  <div class="h1">Facebook reaches Zambia.<br>Instagram earns the younger generation.</div>
+  <p class="body" style="margin-bottom:1rem">Facebook is the primary channel for reaching Lusaka's working and retail population aged 25–50. It is where trust is built through community, storytelling, and proof. Instagram handles the 22–35 aspirational professional segment who respond to visual credibility and lifestyle framing. These two platforms run a different funnel to LinkedIn — broader, warmer, and longer. The purchase decision takes more time. The trust build is richer. The volume is higher.</p>
+
+  <div class="lbl">The Facebook and Instagram funnel</div>
+  <div class="fb" style="background:#0A006E">
+    <div><div class="fb-title">Stage 1 — Cold audience: Awareness content (organic + boosted)</div><div class="fb-sub">Education posts, myth-busting, claims proof stories, bursary content, behind-the-scenes team content. No ask. Pure value. Boosted to Lusaka, age 25–50, interests: business, car ownership, homeownership, family. Budget: K 1,500–2,000/month on boosting best organic posts.</div></div>
+    <div class="fb-kpi">Goal: reach and follows</div>
+  </div>
+  <div style="width:2px;height:5px;background:#0A006E;margin-left:16px"></div>
+  <div class="fb" style="background:#1A108A">
+    <div><div class="fb-title">Stage 2 — Warm audience: Engagement retargeting</div><div class="fb-sub">People who engaged with a post, watched a video for more than 3 seconds, or visited the Facebook page in the last 60 days. Show them social proof content: client stories, "does your cover actually work?" carousel. Still no hard ask. Just deepening the relationship.</div></div>
+    <div class="fb-kpi">Goal: deepen trust</div>
+  </div>
+  <div style="width:2px;height:5px;background:#1A108A;margin-left:28px"></div>
+  <div class="fb" style="background:#8B0A40">
+    <div><div class="fb-title">Stage 3 — Hot audience: Lead Gen ads (paid)</div><div class="fb-sub">Facebook Lead Ads with a pre-filled form. Target: people who engaged 2+ times with Longhorn content OR website visitors. Offer: "Free Insurance Health Check — find out if your current cover is actually protecting you." Form: Name, phone number, what type of cover are you interested in. 4 fields maximum. Budget: K 3,500–6,000/month.</div></div>
+    <div class="fb-kpi">Goal: enquiry capture</div>
+  </div>
+  <div style="width:2px;height:5px;background:#8B0A40;margin-left:40px"></div>
+  <div class="fb" style="background:#C8121E">
+    <div><div class="fb-title">Stage 4 — Lead enters CRM. WhatsApp automation fires.</div><div class="fb-sub">Facebook Lead form submission → Zapier → CRM. WhatsApp auto-message within 60 seconds. "Hi [name], thanks for requesting your free insurance health check. A Longhorn broker will contact you within [X hours]. While you wait — here is the one question most people forget to ask their insurer." Nurture sequence begins.</div></div>
+    <div class="fb-kpi">SLA: 60 sec auto. 2hr human.</div>
+  </div>
+  <div style="width:2px;height:5px;background:#C8121E;margin-left:52px"></div>
+  <div class="fb" style="background:#7D0A16">
+    <div><div class="fb-title">Stage 5 — Conversion or re-engagement</div><div class="fb-sub">A-leads: broker contact within 2 hours → consultation → quote. B/C-leads: 22-day nurture sequence (6 WhatsApp/email touchpoints). Day 0 welcome. Day 2 education. Day 5 proof story. Day 10 risk insight specific to their cover type. Day 15 soft ask. Day 22 final offer. Unresponsive leads: re-enter cold audience retargeting pool.</div></div>
+    <div class="fb-kpi">Goal: policy signed</div>
+  </div>
+
+  <div class="div"></div>
+  <div class="lbl">Facebook vs Instagram — different content, same funnel</div>
+  <div class="g2">
+    <div class="card">
+      <div class="h2" style="margin-bottom:.6rem">Facebook — community and trust</div>
+      <div class="step"><div class="snum sn-r">1</div><div><p class="body"><strong>Claims proof stories:</strong> Full narrative posts. "Here is what happened. Here is what Longhorn did. Here is where Chanda's business is now." Long form works on Facebook. Engagement drives organic reach.</p></div></div>
+      <div class="step"><div class="snum sn-r">2</div><div><p class="body"><strong>Educational carousels:</strong> Swipe-through posts. "5 things your motor policy does not cover." "What to do in the first 30 minutes after an accident." Saves and shares are the top engagement signals.</p></div></div>
+      <div class="step"><div class="snum sn-r">3</div><div><p class="body"><strong>Bursary and CSR content:</strong> Ceremony photographs. Student updates. Workshop coverage. This content generates the warmth and community feeling that makes the brand feel local and human — not corporate.</p></div></div>
+      <div class="step"><div class="snum sn-r">4</div><div><p class="body"><strong>Myth-busting posts:</strong> "Insurance is too expensive for small businesses." Followed by a real price comparison. Comment threads drive organic reach. People tag business-owning friends.</p></div></div>
+    </div>
+    <div class="card">
+      <div class="h2" style="margin-bottom:.6rem">Instagram — visual credibility</div>
+      <div class="step"><div class="snum sn-n">1</div><div><p class="body"><strong>Reels (30–60 seconds):</strong> Broker answering one question per video. "Can you get insurance without going through a bank?" Plain spoken. No script feeling. Authenticity beats production value on Instagram Reels in the Zambian market.</p></div></div>
+      <div class="step"><div class="snum sn-n">2</div><div><p class="body"><strong>Quote cards:</strong> Single powerful lines from client stories or broker insights. Clean design. On-brand. Saveable. "One fire. Three weeks. The business was back open. That is what insurance is supposed to do." </p></div></div>
+      <div class="step"><div class="snum sn-n">3</div><div><p class="body"><strong>Behind the scenes Stories:</strong> Roadshow setup. Broker visiting a client's business. School ceremony day. Informal. Real. Stories disappear after 24 hours — they feel current and alive.</p></div></div>
+      <div class="step"><div class="snum sn-n">4</div><div><p class="body"><strong>Product explainer carousels:</strong> Visually designed. "What motor comprehensive cover actually includes" with illustrated breakdown. Saved by people who want to understand before they enquire.</p></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════ GOOGLE ADS ══════ -->
+<div id="p-google" class="pg">
+  <div class="lbl">Google Ads — intent capture</div>
+  <div class="h1">Google catches the person who is already looking.<br>No other channel does that.</div>
+  <p class="body" style="margin-bottom:1rem">Facebook and LinkedIn build audiences of people who were not looking for insurance until Longhorn made them think about it. Google captures people who are already looking. They typed something into a search box. That act is the highest commercial intent signal available in digital marketing. Google Ads is therefore the lowest-volume but highest-conversion channel in the entire system. Every kwacha spent here reaches someone who has already decided they want something — Longhorn just needs to be what they find.</p>
+
+  <div class="alert alert-g">
+    <p><strong>Critical principle — landing page match:</strong> Every Google Ad must link to a dedicated landing page that matches the exact search query and the exact ad copy. Not the homepage. A person who searches "motor insurance broker Lusaka" and lands on a generic insurance homepage will leave in four seconds. A person who lands on a page that says "Motor insurance for Lusaka drivers — compare 22 providers in 20 minutes" will stay and enquire.</p>
+  </div>
+
+  <div class="lbl" style="margin-top:.75rem">Campaign architecture — three campaign types</div>
+  <div class="g3">
+    <div class="card" style="border-top:3px solid #27500A">
+      <div class="h2">Campaign 1 — Broker intent</div>
+      <p class="body" style="margin-bottom:.5rem">Targets people searching for a broker specifically. These are the warmest possible leads — they already know what a broker is and want one.</p>
+      <div class="small" style="margin-bottom:.5rem"><strong>Keywords:</strong> "insurance broker Lusaka," "insurance broker Zambia," "compare insurance Zambia," "best insurance broker Lusaka," "independent insurance broker Zambia"</div>
+      <div class="small"><strong>Ad copy frame:</strong> "Longhorn Insurance Brokers — We compare 22 providers. You get the best deal. Free cover check today."</div>
+      <div style="margin-top:.5rem"><span class="tag t-g">Budget: K 2,500–4,000/mo</span><span class="tag t-gr">Highest priority</span></div>
+    </div>
+    <div class="card" style="border-top:3px solid #C8121E">
+      <div class="h2">Campaign 2 — Product intent</div>
+      <p class="body" style="margin-bottom:.5rem">Targets people searching for specific cover types. They know what they want. They may not know Longhorn yet.</p>
+      <div class="small" style="margin-bottom:.5rem"><strong>Keywords:</strong> "motor insurance Lusaka," "business insurance Zambia," "group medical insurance Lusaka," "home contents insurance Zambia," "fire insurance small business Lusaka"</div>
+      <div class="small"><strong>Ad copy frame:</strong> "Motor Insurance Lusaka — Compare 22 providers. Find a better deal than your bank's offer. Free quote in 20 mins."</div>
+      <div style="margin-top:.5rem"><span class="tag t-r">Budget: K 2,000–3,500/mo</span><span class="tag t-gr">Per product group</span></div>
+    </div>
+    <div class="card" style="border-top:3px solid #0A006E">
+      <div class="h2">Campaign 3 — Problem-aware</div>
+      <p class="body" style="margin-bottom:.5rem">Targets people who have experienced a problem and are now searching for solutions. High emotional intent.</p>
+      <div class="small" style="margin-bottom:.5rem"><strong>Keywords:</strong> "insurance claim rejected Zambia," "insurance not paying Zambia," "change insurance broker Lusaka," "insurance complaint Zambia," "is my insurance valid"</div>
+      <div class="small"><strong>Ad copy frame:</strong> "Insurance claim rejected? We know what to do. Longhorn Insurance Brokers — on your side. Free consultation."</div>
+      <div style="margin-top:.5rem"><span class="tag t-n">Budget: K 1,000–2,000/mo</span><span class="tag t-gr">Highest emotion</span></div>
+    </div>
+  </div>
+
+  <div class="div"></div>
+  <div class="lbl">Google funnel — from search to signed policy</div>
+  <div class="fb" style="background:#27500A"><div><div class="fb-title">Search query triggers ad</div><div class="fb-sub">Person types target keyword. Longhorn ad appears at top of results. Ad copy directly mirrors the search intent. 2–3 ads per keyword group, A/B tested on headline.</div></div><div class="fb-kpi">Impression → Click</div></div>
+  <div style="width:2px;height:5px;background:#27500A;margin-left:16px"></div>
+  <div class="fb" style="background:#3B6D11"><div><div class="fb-title">Dedicated landing page — product specific, conversion optimised</div><div class="fb-sub">Page headline matches ad copy exactly. 3-second clarity: what Longhorn does, why a broker, how to start. WhatsApp CTA button above the fold. Enquiry form with 4 fields maximum. Mobile first — 85% of Zambian Google searches happen on mobile.</div></div><div class="fb-kpi">Click → Enquiry</div></div>
+  <div style="width:2px;height:5px;background:#3B6D11;margin-left:28px"></div>
+  <div class="fb" style="background:#C8121E"><div><div class="fb-title">Enquiry → CRM → 60-second WhatsApp automation</div><div class="fb-sub">Form submitted. Zapier fires. CRM lead created with source tagged as Google/campaign/keyword. WhatsApp auto-message sends. Broker alerted with full brief. Priority: Google leads are the hottest in the system. Broker response SLA: 1 hour maximum.</div></div><div class="fb-kpi">SLA: 1hr for Google leads</div></div>
+  <div style="width:2px;height:5px;background:#C8121E;margin-left:40px"></div>
+  <div class="fb" style="background:#8B0A16"><div><div class="fb-title">Google retargeting for non-converters</div><div class="fb-sub">People who visited a landing page but did not submit a form are added to a retargeting audience. Google Display ads follow them across other sites for 30 days. Ad message: "Still thinking about cover? Your free insurance health check is waiting." Budget: K 800–1,500/month.</div></div><div class="fb-kpi">30-day retarget window</div></div>
+</div>
+
+<!-- ══════ WHATSAPP ══════ -->
+<div id="p-whatsapp" class="pg">
+  <div class="lbl">WhatsApp — the conversion channel</div>
+  <div class="h1">WhatsApp is where Zambia decides.<br>98% open rate. Nothing else comes close.</div>
+  <p class="body" style="margin-bottom:1rem">WhatsApp is not a social media platform in Zambia. It is the primary communication channel for personal, professional, and commercial life. Research confirms a 98% open rate — compared to 20–25% for email. Every other channel in this plan exists, in part, to move a person into a WhatsApp conversation with a Longhorn broker. WhatsApp is where trust is confirmed, questions are answered, and decisions are made.</p>
+
+  <div class="g2">
+    <div>
+      <div class="lbl">WhatsApp Business architecture</div>
+      <div class="step"><div class="snum sn-n">01</div><div><div class="h3">WhatsApp Business account — verified</div><p class="body">A verified WhatsApp Business account for Longhorn with a complete profile: logo, business description, website link, business hours, and product catalogue. The catalogue lists Longhorn's cover categories with the reframed descriptions, not the technical product names.</p></div></div>
+      <div class="step"><div class="snum sn-r">02</div><div><div class="h3">Instant automated response (60 seconds)</div><p class="body">Every inbound message triggers an instant automated reply. "Thank you for reaching out to Longhorn Insurance Brokers. A broker will respond to you personally within [X hours]. While you wait — tell us: what type of cover are you thinking about? 1. Motor. 2. Business. 3. Home. 4. Medical. 5. Life." This reply qualifies the lead before the broker picks up the conversation.</p></div></div>
+      <div class="step"><div class="snum sn-n">03</div><div><div class="h3">Quick reply templates</div><p class="body">Pre-approved response templates for the most common enquiry types. Motor enquiry. Business cover enquiry. Claims question. Renewal enquiry. Each template is warm and human — not corporate boilerplate. Consistent voice regardless of which broker responds.</p></div></div>
+      <div class="step"><div class="snum sn-r">04</div><div><div class="h3">Broadcast list — weekly value delivery</div><p class="body">An opt-in broadcast list built from every touchpoint: website form, roadshow contacts, workshop attendees, existing clients. Weekly broadcast: one insurance insight, one myth-bust, one specific relevant link. Under 150 words. Sent on Tuesdays at 8am. Open rate target: 60%+. No selling. Pure value — except one broadcast per month which includes a specific offer.</p></div></div>
+      <div class="step"><div class="snum sn-g">05</div><div><div class="h3">Click-to-WhatsApp ads (Meta)</div><p class="body">Facebook and Instagram ads with a "Message on WhatsApp" call to action. The ad drives directly into a WhatsApp conversation — no landing page in between. Removes one entire conversion step. Works especially well for time-sensitive offers and roadshow promotions. Lower friction = higher conversion rate from ad to conversation.</p></div></div>
+    </div>
+    <div>
+      <div class="lbl">The 22-day WhatsApp nurture sequence</div>
+      <div class="card">
+        <div class="step"><div class="snum sn-n">Day 0</div><div><p class="body"><strong>Welcome.</strong> "Hi [name], I am [broker name] at Longhorn Insurance Brokers. You asked about [cover type]. Here is one thing most people do not know about [cover type] in Zambia: [specific insight]. Happy to answer any questions — just reply here."</p></div></div>
+        <div class="step"><div class="snum sn-r">Day 2</div><div><p class="body"><strong>Education.</strong> "Quick one — most [cover type] policies in Zambia do not cover [specific common exclusion]. Here is how to check yours in under 2 minutes: [simple instruction]."</p></div></div>
+        <div class="step"><div class="snum sn-n">Day 5</div><div><p class="body"><strong>Proof story.</strong> "Last year, a client came to us after their motor insurer rejected a claim for [specific reason]. We challenged it. Here is what happened: [outcome]. You deserve a broker who does that for you."</p></div></div>
+        <div class="step"><div class="snum sn-r">Day 10</div><div><p class="body"><strong>Risk insight.</strong> "One question for you: if [specific risk event relevant to their enquiry type] happened tomorrow, what would happen to your [business/car/family]? Most people are surprised by the answer. Happy to walk you through it in 20 minutes."</p></div></div>
+        <div class="step"><div class="snum sn-g">Day 15</div><div><p class="body"><strong>Soft ask.</strong> "I have been thinking about your situation. Based on what you told me, I think there are two specific things you should know before you make any decisions. Can I call you for 20 minutes this week?"</p></div></div>
+        <div class="step"><div class="snum sn-a">Day 22</div><div><p class="body"><strong>Final offer.</strong> "Last message from me for now. The free insurance health check we discussed is available until [date]. After that I will leave you to it. But if you ever have questions — I am here."</p></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════ BEHAVIOURAL DESIGN ══════ -->
+<div id="p-behaviour" class="pg">
+  <div class="lbl">Behavioural design — applied at every interaction</div>
+  <div class="h1">Every touchpoint is designed<br>to reduce resistance and increase action.</div>
+  <p class="body" style="margin-bottom:1rem">Behavioural science is not a campaign element. It is the operating principle behind every single interaction a person has with the Longhorn brand — from the first Facebook post they see to the WhatsApp message they receive three weeks after enquiring to the renewal reminder two months before their policy expires. The five principles below are applied consistently across every channel, every piece of content, and every point of human contact.</p>
+
+  <div class="lbl">The five principles — applied everywhere</div>
+  <div class="ca ca-r" style="margin-bottom:.65rem">
+    <div class="h3" style="color:#C8121E">1. Loss Aversion — applied to content and campaign copy</div>
+    <p class="body" style="margin-top:3px"><strong>The principle:</strong> People are twice as motivated by avoiding a loss as gaining an equivalent benefit. <strong>The application:</strong> Content leads with what is at stake, not what is gained. "What happens to your employees if you close for three months after a fire?" not "Business interruption cover pays your bills." Every product description, every ad headline, every WhatsApp message is written with loss framing before gain framing. The loss is always specific, local, and vivid — not statistical.</p>
+  </div>
+  <div class="ca ca-n" style="margin-bottom:.65rem">
+    <div class="h3" style="color:#0A006E">2. Friction Reduction — applied to every conversion point</div>
+    <p class="body" style="margin-top:3px"><strong>The principle:</strong> Every additional step between intent and action loses a percentage of people permanently. <strong>The application:</strong> Maximum four fields on every form. WhatsApp CTA on every page and ad — one tap to start a conversation. "Book a free 20-minute call" not "request a consultation." "Send us a WhatsApp" not "complete the online enquiry form." For LinkedIn Lead Gen Forms, fields are pre-filled from the LinkedIn profile. Every decision point is reviewed with one question: is there anything here that makes it harder to take the next step?</p>
+  </div>
+  <div class="ca ca-g" style="margin-bottom:.65rem">
+    <div class="h3" style="color:#27500A">3. Social Proof — applied to all trust-building content</div>
+    <p class="body" style="margin-top:3px"><strong>The principle:</strong> Under uncertainty, people look to what others like them are already doing. <strong>The application:</strong> Every claims proof story is told with a name, a business type, a location, and a specific outcome — because specificity makes the proof feel real, not manufactured. "A Lusaka logistics company" is more persuasive than "a business in Zambia." LinkedIn thought leadership posts reference real industry context. WhatsApp nurture sequences include specific outcome statements. Over time, the client roster and case library is the most powerful sales tool Longhorn has.</p>
+  </div>
+  <div class="ca ca-a" style="margin-bottom:.65rem">
+    <div class="h3" style="color:#BA7517">4. Trust Heuristics — applied to brand signals at every level</div>
+    <p class="body" style="margin-top:3px"><strong>The principle:</strong> In financial decisions, people use credibility proxies to assess trustworthiness quickly — because they cannot evaluate the actual product quality before buying. <strong>The application:</strong> Named brokers (not "the Longhorn team"). PIA licensing referenced explicitly. Leadership team profiles complete and visible. Consistent visual identity across every platform and every interaction. Response time kept to SLA because speed signals professionalism. The bursary programme signals permanence and community investment. Every one of these is a trust proxy that reduces the perceived risk of engaging with a brand nobody has heard of yet.</p>
+  </div>
+  <div class="ca ca-r">
+    <div class="h3" style="color:#C8121E">5. Optimism Bias Correction — applied to risk content and SME targeting</div>
+    <p class="body" style="margin-top:3px"><strong>The principle:</strong> People consistently underestimate the probability of negative events happening to them personally. This is especially strong in low-insurance markets where most people have no direct experience of a claim. <strong>The application:</strong> Content uses local data and local stories to make risk feel proximate. "Three businesses on Cairo Road experienced this in the last 18 months" is more persuasive than "it happens to businesses every day." The roadshow cover check is designed to surface gaps people did not know they had — making the risk concrete rather than abstract. Personal exposure becomes visible. Abstract risk becomes specific. The SME workshop is built around this principle entirely.</p>
+  </div>
+
+  <div class="div"></div>
+  <div class="lbl">Behavioural design applied to the brand voice</div>
+  <div class="g2">
+    <div class="card">
+      <div class="h2">How Longhorn speaks</div>
+      <p class="body" style="margin-bottom:.5rem">Plain. Direct. Warm but not soft. The voice of someone who knows exactly what they are talking about and refuses to make it complicated. Never condescending. Never corporate. Never vague.</p>
+      <div class="step"><div class="snum sn-r">✓</div><div><p class="body"><strong>"Your car is how you earn. Let us make sure one accident does not stop you."</strong></p></div></div>
+      <div class="step"><div class="snum sn-r">✓</div><div><p class="body"><strong>"We compared 22 providers for a Lusaka logistics company. Found them a policy K 4,000 cheaper per year with better cover."</strong></p></div></div>
+      <div class="step"><div class="snum sn-r">✓</div><div><p class="body"><strong>"Mwamba's workshop burned on a Tuesday. We had the claim lodged by Thursday. His business was back open six weeks later."</strong></p></div></div>
+    </div>
+    <div class="card">
+      <div class="h2">How Longhorn never speaks</div>
+      <p class="body" style="margin-bottom:.5rem">Corporate. Jargon-filled. Passive. Generic. The language of every other financial institution in Zambia that nobody trusts.</p>
+      <div class="step"><div class="snum sn-n">✗</div><div><p class="body"><strong>"Longhorn provides comprehensive insurance solutions tailored to your unique needs."</strong></p></div></div>
+      <div class="step"><div class="snum sn-n">✗</div><div><p class="body"><strong>"Our team of experienced professionals is committed to delivering exceptional service."</strong></p></div></div>
+      <div class="step"><div class="snum sn-n">✗</div><div><p class="body"><strong>"Contact us today to learn more about our range of products and services."</strong></p></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════ ALL TOUCHPOINTS ══════ -->
+<div id="p-touchpoints" class="pg">
+  <div class="lbl">Brand touchpoint map — applied consistently</div>
+  <div class="h1">Every interaction is a brand interaction.<br>None of them are neutral.</div>
+  <p class="body" style="margin-bottom:1rem">Brand growth does not happen in campaigns. It happens in the accumulation of every experience a person has with Longhorn — from the first post they scroll past to the way the broker speaks in a consultation call to the wording of a renewal reminder. Every touchpoint below has defined standards. Inconsistency at any point is a trust erosion event.</p>
+
+  <div class="lbl">Digital touchpoints</div>
+  <div class="g2">
+    <div class="tp-card">
+      <div class="tp-platform" style="color:#0A006E">WEBSITE HOMEPAGE</div>
+      <div class="tp-msg">Answers three questions in 10 seconds: what Longhorn does, why a broker, how to start. WhatsApp CTA above the fold. No hero image of a handshake or a family on a beach. An image of Lusaka. A real broker. Something specific.</div>
+      <div class="tp-action" style="color:#C8121E">One action: "Get your free cover check"</div>
+    </div>
+    <div class="tp-card">
+      <div class="tp-platform" style="color:#C8121E">PRODUCT LANDING PAGES</div>
+      <div class="tp-msg">One per cover type. Headline matches the reframed product description. Loss-framed opening paragraph. One specific proof story. One simple form. Four fields. WhatsApp option alongside the form. Mobile first.</div>
+      <div class="tp-action" style="color:#0A006E">One action: "Request a quote" or "WhatsApp us"</div>
+    </div>
+    <div class="tp-card">
+      <div class="tp-platform" style="color:#27500A">LINKEDIN — PERSONAL PROFILES</div>
+      <div class="tp-msg">Every broker and leader has a complete, professional profile. Headline is their value proposition, not their job title. "Insurance broker helping Lusaka businesses get the cover they actually need — not what one insurer wants to sell." Featured section shows the bursary launch or a client success story.</div>
+      <div class="tp-action" style="color:#C8121E">One action: "Connect" or "Message"</div>
+    </div>
+    <div class="tp-card">
+      <div class="tp-platform" style="color:#BA7517">EMAIL — ALL OUTBOUND</div>
+      <div class="tp-msg">Every email from a Longhorn broker has a consistent signature: name, role, phone number, WhatsApp link, one-line brand statement. Quote emails are human, not automated-feeling. "Here is what I found for you" not "Please find enclosed your quotation." Follow-up emails have specific subject lines. Never "Following up."</div>
+      <div class="tp-action" style="color:#0A006E">One action per email, always</div>
+    </div>
+  </div>
+
+  <div class="lbl" style="margin-top:.5rem">Physical and in-person touchpoints</div>
+  <div class="g2">
+    <div class="tp-card">
+      <div class="tp-platform" style="color:#C8121E">ROADSHOW — COVER CHECK STAND</div>
+      <div class="tp-msg">The stand does not say "Longhorn Insurance." It says "Free Cover Check — find out what your policy is missing." The product is the service, not the brand. Brand identity visible but secondary. Brokers wear branded lanyards. One-page cover check summary printed on branded card, taken away by every visitor.</div>
+      <div class="tp-action" style="color:#0A006E">One action: "Save this number and WhatsApp us when you are ready"</div>
+    </div>
+    <div class="tp-card">
+      <div class="tp-platform" style="color:#0A006E">CORPORATE RISK BRIEFINGS</div>
+      <div class="tp-msg">The first ten minutes of every briefing are about the audience's industry, not about Longhorn. "Here is what we see happening with construction companies in Lusaka right now." The audience feels understood before they feel pitched to. Longhorn's materials are professionally printed, not emailed PDFs. Leave-behind is a one-page risk summary for their specific sector.</div>
+      <div class="tp-action" style="color:#C8121E">One action: "Book a 30-minute follow-up for your specific situation"</div>
+    </div>
+    <div class="tp-card">
+      <div class="tp-platform" style="color:#27500A">SME WORKSHOPS</div>
+      <div class="tp-msg">Workshop opens with a question, not a presentation. "How many of you have made an insurance claim in the last five years?" The answer shapes the session. Content is interactive. At the end, every attendee receives a one-page "Your Business Risk Profile" — a simple self-assessment they complete during the session. This document becomes a natural follow-up prompt.</div>
+      <div class="tp-action" style="color:#BA7517">One action: "WhatsApp us your completed risk profile"</div>
+    </div>
+    <div class="tp-card">
+      <div class="tp-platform" style="color:#BA7517">BURSARY CEREMONY</div>
+      <div class="tp-msg">The ceremony is not about Longhorn. It is about the student and their family. Longhorn is present, Longhorn branding is visible, but the narrative is theirs. The press photographer is briefed to capture the student's face, the parent's reaction, and the school setting — not the Longhorn banner. Authenticity is the deliverable.</div>
+      <div class="tp-action" style="color:#C8121E">No ask. Pure trust deposit.</div>
+    </div>
+  </div>
+
+  <div class="lbl" style="margin-top:.5rem">Human interaction touchpoints</div>
+  <div class="g3">
+    <div class="tp-card">
+      <div class="tp-platform" style="color:#C8121E">FIRST BROKER CALL</div>
+      <div class="tp-msg">Opens with what the broker already knows about the client from the CRM brief. "I saw you enquired about motor insurance — you also mentioned you run a small business. Before we talk about motor, can I ask about the business?" Shows preparation. Creates immediate differentiation from every other insurer they have spoken to.</div>
+    </div>
+    <div class="tp-card">
+      <div class="tp-platform" style="color:#0A006E">QUOTE DELIVERY</div>
+      <div class="tp-msg">Sent as a WhatsApp voice note summary, followed by the written quote. "Hi Chanda, here is what I found for you. I compared seven providers. The best option is from [insurer] — here is why I chose them and not the cheaper option." The human voice over the number. Trust is built in the explanation, not the price.</div>
+    </div>
+    <div class="tp-card">
+      <div class="tp-platform" style="color:#27500A">RENEWAL REMINDER</div>
+      <div class="tp-msg">Not an automated system email. A WhatsApp from the broker. "Hi Chanda, your motor policy renews in 60 days. Before we just roll it over, I want to check if anything has changed with the business this year — sometimes that changes what cover makes sense." Treats renewal as a relationship moment, not an administrative task.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════ GROWTH STAGES ══════ -->
+<div id="p-stages" class="pg">
+  <div class="lbl">Growth stages — zero to compounding</div>
+  <div class="h1">Four stages. Eighteen months.<br>From no presence to market position.</div>
+  <p class="body" style="margin-bottom:1rem">Brand growth is not linear and it is not fast. The plan below is honest about what each stage produces and what it does not. The first stage produces no direct revenue. It produces the infrastructure that makes revenue possible. Each stage builds on the one before. Skipping a stage does not accelerate growth — it guarantees that the next stage underperforms.</p>
+
+  <div class="stage-block" style="border-color:#0A006E">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:.6rem">
+      <span class="tag t-n">Stage 1</span><span class="h2">Foundation — Months 1–3</span><span class="small" style="margin-left:auto">Zero to visible</span>
+    </div>
+    <p class="body" style="margin-bottom:.65rem">Everything that must exist before we reach anyone. No campaigns. No events. No spending on audiences that have nowhere to land.</p>
+    <div class="g3" style="margin-bottom:.5rem">
+      <div><div class="h3" style="margin-bottom:.3rem">Build</div><p class="small">Website + 5 landing pages. CRM + WhatsApp automation. All four social profiles. Brand voice and design system. Analytics and tracking stack.</p></div>
+      <div><div class="h3" style="margin-bottom:.3rem">Launch</div><p class="small">Social accounts go live. First ten organic posts. Bursary programme announced — press release, ceremony, social launch. First media placement.</p></div>
+      <div><div class="h3" style="margin-bottom:.3rem">Activate internally</div><p class="small">Commercial lead named and briefed. WhatsApp responder trained. CRM in active use. Broker profiles on LinkedIn optimised. Content contributor schedule agreed.</p></div>
+    </div>
+    <div class="alert alert-n" style="margin-bottom:0"><p><strong>Stage 1 output:</strong> A brand that exists online, looks credible, and has a functioning system to capture and respond to enquiries. No paid campaigns yet. No events yet. First 50 social followers. First press coverage from the bursary launch. First 20 WhatsApp broadcast subscribers.</p></div>
+  </div>
+
+  <div class="stage-block" style="border-color:#C8121E">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:.6rem">
+      <span class="tag t-r">Stage 2</span><span class="h2">Activation — Months 4–7</span><span class="small" style="margin-left:auto">Visible to active</span>
+    </div>
+    <p class="body" style="margin-bottom:.65rem">First paid campaigns. First events. First referral partners. First real pipeline. Revenue begins here.</p>
+    <div class="g3" style="margin-bottom:.5rem">
+      <div><div class="h3" style="margin-bottom:.3rem">Paid channels live</div><p class="small">LinkedIn Lead Gen Campaign 1. Facebook and Instagram lead ads. Google Search — broker and product intent campaigns. Total ad spend: K 7,000–12,000/month.</p></div>
+      <div><div class="h3" style="margin-bottom:.3rem">Activations begin</div><p class="small">First Cover Check roadshow (Month 4). First two corporate risk briefings. SME workshop series launched. First 2 referral partnerships signed and active.</p></div>
+      <div><div class="h3" style="margin-bottom:.3rem">CSR running</div><p class="small">Bursary recipient journey updates quarterly. First community proof story published. School literacy programme — 3 pilot schools. First SME workshop session.</p></div>
+    </div>
+    <div class="alert alert-r" style="margin-bottom:0"><p><strong>Stage 2 output:</strong> 10–25 qualified enquiries per month. First 5–10 policies from digital channels. 400+ WhatsApp subscribers. 1,500+ social media followers. 2 active referral partners. First corporate pipeline conversations active. Monthly revenue from digital-sourced clients beginning to show.</p></div>
+  </div>
+
+  <div class="stage-block" style="border-color:#27500A">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:.6rem">
+      <span class="tag t-g">Stage 3</span><span class="h2">Optimisation — Months 8–12</span><span class="small" style="margin-left:auto">Active to efficient</span>
+    </div>
+    <p class="body" style="margin-bottom:.65rem">Data drives everything. The channels that work get more budget. The content that converts gets replicated. The partnerships that generate leads get formalised.</p>
+    <div class="g3" style="margin-bottom:.5rem">
+      <div><div class="h3" style="margin-bottom:.3rem">Campaign optimisation</div><p class="small">CPL reviewed monthly. Worst-performing ad sets paused. Best-performing creative replicated. Keyword list refined on Google. LinkedIn retargeting added. Budget reallocated to highest-converting channels.</p></div>
+      <div><div class="h3" style="margin-bottom:.3rem">Pipeline health</div><p class="small">Weekly pipeline report reviewed by leadership. Conversion rates at each stage tracked. Nurture sequence refined based on response rates. Referral partner performance measured.</p></div>
+      <div><div class="h3" style="margin-bottom:.3rem">Scale what works</div><p class="small">4+ active referral partners. Second roadshow location added. Micro-influencer partnerships activated. SEO ranking for 3+ target keywords achieved. Bursary programme scoped for year two — 2 recipients.</p></div>
+    </div>
+    <div class="alert alert-g" style="margin-bottom:0"><p><strong>Stage 3 output:</strong> 30–50 qualified enquiries per month. Cost per enquiry falling month-on-month as organic compounds. 800+ WhatsApp subscribers. 3,500+ social media followers. 4+ referral partners active. Monthly premium revenue from digital-sourced clients tracked and growing. First year-one KPI review completed.</p></div>
+  </div>
+
+  <div class="stage-block" style="border-color:#BA7517">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:.6rem">
+      <span class="tag t-a">Stage 4</span><span class="h2">Compounding — Months 13–18</span><span class="small" style="margin-left:auto">Efficient to compounding</span>
+    </div>
+    <p class="body" style="margin-bottom:.65rem">The system is now self-reinforcing. Organic reach grows without proportional increase in content spend. Referrals multiply. Renewals reduce churn. Brand recognition reduces friction at every stage of the funnel.</p>
+    <div class="g3" style="margin-bottom:.5rem">
+      <div><div class="h3" style="margin-bottom:.3rem">Geographic expansion</div><p class="small">Livingstone and Ndola activated with targeted Facebook and Google campaigns. Roadshow programme expanded. Partner schools programme grows to 8 schools nationally.</p></div>
+      <div><div class="h3" style="margin-bottom:.3rem">Content library compounds</div><p class="small">12+ months of content now indexed by Google. SEO driving organic traffic that costs nothing per visit. LinkedIn authority established — leadership team posts reach audiences of 2,000–5,000 per post organically.</p></div>
+      <div><div class="h3" style="margin-bottom:.3rem">Referral self-sustaining</div><p class="small">6+ referral partners active. Referral-sourced enquiries account for 20%+ of monthly pipeline. These leads cost almost nothing to acquire and convert at twice the rate of cold ad leads.</p></div>
+    </div>
+    <div class="alert alert-a" style="margin-bottom:0;border-color:#BA7517;background:#FAEEDA"><p><strong>Stage 4 output:</strong> 50+ qualified enquiries per month. Cost per enquiry 30%+ lower than Stage 2 as organic compounds. Monthly premium revenue from digital-sourced clients at target. Longhorn recognised as the leading insurance brokerage voice in Lusaka's professional market. Year-two plan funded from year-one revenue growth.</p></div>
+  </div>
+</div>
+
+<!-- ══════ KPIs ══════ -->
+<div id="p-kpis" class="pg">
+  <div class="lbl">KPIs — the full measurement framework</div>
+  <div class="h1">What gets measured gets managed.<br>What gets managed gets improved.</div>
+  <p class="body" style="margin-bottom:1rem">The KPI framework below is organised by channel, by stage, and by commercial outcome. Every metric has a clear line to either brand equity (which reduces future acquisition cost) or direct revenue (which justifies current spend). The weekly CEO dashboard at the bottom covers the six numbers that tell the whole story in under two minutes every Monday morning.</p>
+
+  <div class="lbl">LinkedIn KPIs</div>
+  <div class="card">
+    <div style="display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:8px;padding:.4rem 0;border-bottom:.5px solid var(--color-border-tertiary)">
+      <div class="small" style="font-weight:500;text-transform:uppercase;letter-spacing:.06em">Metric</div>
+      <div class="small" style="font-weight:500;text-align:center">M6</div>
+      <div class="small" style="font-weight:500;text-align:center">M12</div>
+      <div class="small" style="font-weight:500;text-align:center">M18</div>
+    </div>
+    <div style="display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:8px;padding:.45rem 0;border-bottom:.5px solid var(--color-border-tertiary);font-size:13px"><div>Company page followers</div><div style="text-align:center;color:var(--color-text-secondary)">300+</div><div style="text-align:center;color:var(--color-text-secondary)">800+</div><div style="text-align:center;color:var(--color-text-secondary)">2,000+</div></div>
+    <div style="display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:8px;padding:.45rem 0;border-bottom:.5px solid var(--color-border-tertiary);font-size:13px"><div>Leadership post avg reach</div><div style="text-align:center;color:var(--color-text-secondary)">500+</div><div style="text-align:center;color:var(--color-text-secondary)">1,500+</div><div style="text-align:center;color:var(--color-text-secondary)">3,000+</div></div>
+    <div style="display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:8px;padding:.45rem 0;border-bottom:.5px solid var(--color-border-tertiary);font-size:13px"><div>Lead Gen form submissions/month</div><div style="text-align:center;color:var(--color-text-secondary)">5–10</div><div style="text-align:center;color:var(--color-text-secondary)">12–20</div><div style="text-align:center;color:var(--color-text-secondary)">20–35</div></div>
+    <div style="display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:8px;padding:.45rem 0;font-size:13px"><div>Cost per LinkedIn lead</div><div style="text-align:center;color:var(--color-text-secondary)">K 600–900</div><div style="text-align:center;color:var(--color-text-secondary)">K 450–700</div><div style="text-align:center;color:var(--color-text-secondary)">K 350–550</div></div>
+  </div>
+
+  <div class="lbl" style="margin-top:.75rem">Facebook and Instagram KPIs</div>
+  <div class="card">
+    <div style="display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:8px;padding:.4rem 0;border-bottom:.5px solid var(--color-border-tertiary)">
+      <div class="small" style="font-weight:500;text-transform:uppercase;letter-spacing:.06em">Metric</div>
+      <div class="small" style="font-weight:500;text-align:center">M6</div>
+      <div class="small" style="font-weight:500;text-align:center">M12</div>
+      <div class="small" style="font-weight:500;text-align:center">M18</div>
+    </div>
+    <div style="display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:8px;padding:.45rem 0;border-bottom:.5px solid var(--color-border-tertiary);font-size:13px"><div>Combined followers (FB + IG)</div><div style="text-align:center;color:var(--color-text-secondary)">1,500+</div><div style="text-align:center;color:var(--color-text-secondary)">4,000+</div><div style="text-align:center;color:var(--color-text-secondary)">8,000+</div></div>
+    <div style="display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:8px;padding:.45rem 0;border-bottom:.5px solid var(--color-border-tertiary);font-size:13px"><div>Average post engagement rate</div><div style="text-align:center;color:var(--color-text-secondary)">3.5%+</div><div style="text-align:center;color:var(--color-text-secondary)">4.5%+</div><div style="text-align:center;color:var(--color-text-secondary)">5.5%+</div></div>
+    <div style="display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:8px;padding:.45rem 0;border-bottom:.5px solid var(--color-border-tertiary);font-size:13px"><div>Lead form submissions/month</div><div style="text-align:center;color:var(--color-text-secondary)">15–25</div><div style="text-align:center;color:var(--color-text-secondary)">25–40</div><div style="text-align:center;color:var(--color-text-secondary)">40–60</div></div>
+    <div style="display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:8px;padding:.45rem 0;font-size:13px"><div>Cost per Facebook/Instagram lead</div><div style="text-align:center;color:var(--color-text-secondary)">K 180–300</div><div style="text-align:center;color:var(--color-text-secondary)">K 130–220</div><div style="text-align:center;color:var(--color-text-secondary)">K 100–180</div></div>
+  </div>
+
+  <div class="lbl" style="margin-top:.75rem">Google Ads KPIs</div>
+  <div class="card">
+    <div style="display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:8px;padding:.4rem 0;border-bottom:.5px solid var(--color-border-tertiary)">
+      <div class="small" style="font-weight:500;text-transform:uppercase;letter-spacing:.06em">Metric</div>
+      <div class="small" style="font-weight:500;text-align:center">M6</div>
+      <div class="small" style="font-weight:500;text-align:center">M12</div>
+      <div class="small" style="font-weight:500;text-align:center">M18</div>
+    </div>
+    <div style="display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:8px;padding:.45rem 0;border-bottom:.5px solid var(--color-border-tertiary);font-size:13px"><div>Organic search clicks/month</div><div style="text-align:center;color:var(--color-text-secondary)">50+</div><div style="text-align:center;color:var(--color-text-secondary)">200+</div><div style="text-align:center;color:var(--color-text-secondary)">500+</div></div>
+    <div style="display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:8px;padding:.45rem 0;border-bottom:.5px solid var(--color-border-tertiary);font-size:13px"><div>Google Ads enquiries/month</div><div style="text-align:center;color:var(--color-text-secondary)">3–8</div><div style="text-align:center;color:var(--color-text-secondary)">8–15</div><div style="text-align:center;color:var(--color-text-secondary)">15–25</div></div>
+    <div style="display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:8px;padding:.45rem 0;border-bottom:.5px solid var(--color-border-tertiary);font-size:13px"><div>Cost per Google enquiry</div><div style="text-align:center;color:var(--color-text-secondary)">K 250–450</div><div style="text-align:center;color:var(--color-text-secondary)">K 180–350</div><div style="text-align:center;color:var(--color-text-secondary)">K 130–250</div></div>
+    <div style="display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:8px;padding:.45rem 0;font-size:13px"><div>Keywords ranking page 1</div><div style="text-align:center;color:var(--color-text-secondary)">0–2</div><div style="text-align:center;color:var(--color-text-secondary)">3–5</div><div style="text-align:center;color:var(--color-text-secondary)">6–10</div></div>
+  </div>
+
+  <div class="lbl" style="margin-top:.75rem">Commercial pipeline KPIs</div>
+  <div class="card">
+    <div style="display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:8px;padding:.4rem 0;border-bottom:.5px solid var(--color-border-tertiary)">
+      <div class="small" style="font-weight:500;text-transform:uppercase;letter-spacing:.06em">Metric</div>
+      <div class="small" style="font-weight:500;text-align:center">M6</div>
+      <div class="small" style="font-weight:500;text-align:center">M12</div>
+      <div class="small" style="font-weight:500;text-align:center">M18</div>
+    </div>
+    <div style="display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:8px;padding:.45rem 0;border-bottom:.5px solid var(--color-border-tertiary);font-size:13px"><div>Total enquiries/month (all channels)</div><div style="text-align:center;color:var(--color-text-secondary)">23–43</div><div style="text-align:center;color:var(--color-text-secondary)">45–75</div><div style="text-align:center;color:var(--color-text-secondary)">75–120</div></div>
+    <div style="display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:8px;padding:.45rem 0;border-bottom:.5px solid var(--color-border-tertiary);font-size:13px"><div>Enquiry to consultation rate</div><div style="text-align:center;color:var(--color-text-secondary)">8%</div><div style="text-align:center;color:var(--color-text-secondary)">12%</div><div style="text-align:center;color:var(--color-text-secondary)">16%</div></div>
+    <div style="display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:8px;padding:.45rem 0;border-bottom:.5px solid var(--color-border-tertiary);font-size:13px"><div>Consultation to policy rate</div><div style="text-align:center;color:var(--color-text-secondary)">20%</div><div style="text-align:center;color:var(--color-text-secondary)">25%</div><div style="text-align:center;color:var(--color-text-secondary)">30%</div></div>
+    <div style="display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:8px;padding:.45rem 0;border-bottom:.5px solid var(--color-border-tertiary);font-size:13px"><div>Referral-sourced enquiries/month</div><div style="text-align:center;color:var(--color-text-secondary)">2–5</div><div style="text-align:center;color:var(--color-text-secondary)">8–15</div><div style="text-align:center;color:var(--color-text-secondary)">15–25</div></div>
+    <div style="display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:8px;padding:.45rem 0;font-size:13px"><div>Monthly premium from digital (ZMW)</div><div style="text-align:center;color:var(--color-text-secondary)">K 40,000+</div><div style="text-align:center;color:var(--color-text-secondary)">K 150,000+</div><div style="text-align:center;color:var(--color-text-secondary)">K 350,000+</div></div>
+  </div>
+
+  <div class="div"></div>
+  <div class="lbl">Weekly CEO dashboard — Monday morning, 6 numbers</div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px">
+    <div class="mc"><div class="mv" style="color:#C8121E">Enquiries</div><div class="ml">Total this week across all channels. Split by LinkedIn, Facebook, Google, referral, organic.</div></div>
+    <div class="mc"><div class="mv" style="color:#0A006E">Pipeline ZMW</div><div class="ml">Total quoted value sitting in the CRM right now, awaiting decision.</div></div>
+    <div class="mc"><div class="mv" style="color:#27500A">Cost/enquiry</div><div class="ml">Average across all paid channels. Directional — is it going up or down vs last week?</div></div>
+    <div class="mc"><div class="mv" style="color:#BA7517">Consults</div><div class="ml">How many consultations were booked from last week's enquiries. Conversion rate visible here.</div></div>
+    <div class="mc"><div class="mv" style="color:#C8121E">Policies</div><div class="ml">Policies signed this month, with the source channel attributed to each one.</div></div>
+    <div class="mc"><div class="mv" style="color:#0A006E">Revenue</div><div class="ml">Monthly premium revenue from digitally sourced clients. The number the plan is ultimately accountable to.</div></div>
+  </div>
+</div>
+
+</div>
+<script>
+function go(id,btn){
+  document.querySelectorAll('.pg').forEach(p=>p.classList.remove('on'));
+  document.querySelectorAll('.nb').forEach(b=>b.classList.remove('on'));
+  document.getElementById('p-'+id).classList.add('on');
+  btn.classList.add('on');
+}
+</script>

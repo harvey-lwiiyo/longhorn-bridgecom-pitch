@@ -1,0 +1,437 @@
+
+<h2 class="sr-only">Longhorn Insurance Brokers — Calibrated KPIs, Industry Benchmarks and Full Agency Budget</h2>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+.w{font-family:var(--font-sans);padding:1.5rem 0}
+.nav-wrap{position:sticky;top:0;background:var(--color-background-primary);z-index:10;padding:.5rem 0 .75rem;border-bottom:0.5px solid var(--color-border-tertiary);margin-bottom:1.5rem}
+.nav{display:flex;gap:5px;flex-wrap:wrap}
+.nb{background:none;border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md);padding:5px 12px;font-size:12px;cursor:pointer;color:var(--color-text-secondary);transition:all .15s;font-family:var(--font-sans);white-space:nowrap}
+.nb:hover{background:var(--color-background-secondary)}
+.nb.on{background:var(--color-background-primary);border-color:var(--color-border-secondary);color:var(--color-text-primary);font-weight:500}
+.pg{display:none}.pg.on{display:block}
+
+.lbl{font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:.08em;color:var(--color-text-tertiary);margin-bottom:.5rem}
+.h1{font-size:21px;font-weight:500;color:var(--color-text-primary);line-height:1.35;margin-bottom:.55rem}
+.h2{font-size:15px;font-weight:500;color:var(--color-text-primary);margin-bottom:.3rem}
+.h3{font-size:13px;font-weight:500;color:var(--color-text-primary);margin-bottom:.25rem}
+.body{font-size:13px;color:var(--color-text-secondary);line-height:1.72}
+.small{font-size:11px;color:var(--color-text-tertiary);line-height:1.5}
+
+.card{background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:1.1rem;margin-bottom:.75rem}
+.ca{border-left:3px solid;border-radius:0 var(--border-radius-md) var(--border-radius-md) 0;padding:.75rem 1rem;margin-bottom:.6rem}
+.ca-r{border-color:#C8121E;background:var(--color-background-secondary)}
+.ca-n{border-color:#0A006E;background:var(--color-background-secondary)}
+.ca-g{border-color:#27500A;background:var(--color-background-secondary)}
+
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:.75rem}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:.75rem}
+
+.tag{display:inline-block;font-size:11px;padding:3px 8px;border-radius:20px;font-weight:500;margin:2px 3px 2px 0}
+.t-r{background:#FAEAEA;color:#C8121E}
+.t-n{background:#E6E5F7;color:#0A006E}
+.t-g{background:#EAF3DE;color:#27500A}
+.t-gr{background:var(--color-background-secondary);color:var(--color-text-secondary)}
+.t-a{background:#FAEEDA;color:#633806}
+
+.div{height:.5px;background:var(--color-border-tertiary);margin:1rem 0}
+
+.alert{border-radius:var(--border-radius-md);padding:.75rem 1rem;margin-bottom:.75rem;border:0.5px solid}
+.alert-r{background:#FAEAEA;border-color:#C8121E}
+.alert-n{background:#E6E5F7;border-color:#0A006E}
+.alert-g{background:#EAF3DE;border-color:#27500A}
+.alert-a{background:#FAEEDA;border-color:#BA7517}
+.alert p,.alert li{font-size:13px;line-height:1.65}
+.alert strong{font-weight:500;color:var(--color-text-primary)}
+
+/* KPI comparison table */
+.kpi-grid{width:100%;border-collapse:collapse;font-size:12px;margin-bottom:.75rem}
+.kpi-grid th{background:var(--color-background-secondary);color:var(--color-text-secondary);font-weight:500;font-size:11px;text-transform:uppercase;letter-spacing:.05em;padding:.5rem .75rem;text-align:left;border-bottom:0.5px solid var(--color-border-tertiary)}
+.kpi-grid td{padding:.5rem .75rem;border-bottom:0.5px solid var(--color-border-tertiary);vertical-align:top;color:var(--color-text-secondary)}
+.kpi-grid tr:last-child td{border-bottom:none}
+.kpi-grid td:first-child{color:var(--color-text-primary);font-weight:500}
+.ind-avg{color:#BA7517;font-weight:500}
+.our-target{color:#27500A;font-weight:500}
+.stretch{color:#C8121E;font-weight:500;font-size:11px}
+
+/* Budget table */
+.budget-section{margin-bottom:1.25rem}
+.budget-section-title{background:var(--color-background-secondary);border-radius:var(--border-radius-md) var(--border-radius-md) 0 0;padding:.5rem .85rem;font-size:12px;font-weight:500;color:var(--color-text-primary);letter-spacing:.03em;border:0.5px solid var(--color-border-tertiary);border-bottom:none}
+.budget-table{width:100%;border-collapse:collapse;font-size:12px;border:0.5px solid var(--color-border-tertiary);border-radius:0 0 var(--border-radius-md) var(--border-radius-md);overflow:hidden}
+.budget-table th{background:var(--color-background-secondary);color:var(--color-text-tertiary);font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:.05em;padding:.4rem .75rem;text-align:left;border-bottom:0.5px solid var(--color-border-tertiary)}
+.budget-table th:nth-child(2),.budget-table th:nth-child(3),.budget-table th:nth-child(4){text-align:right}
+.budget-table td{padding:.45rem .75rem;border-bottom:0.5px solid var(--color-border-tertiary);color:var(--color-text-secondary);vertical-align:top}
+.budget-table tr:last-child td{border-bottom:none}
+.budget-table td:first-child{color:var(--color-text-primary)}
+.budget-table td:nth-child(2),.budget-table td:nth-child(3),.budget-table td:nth-child(4){text-align:right;white-space:nowrap}
+.budget-table .note-cell{font-size:11px;color:var(--color-text-tertiary);font-style:italic}
+.setup-row td:first-child{color:#0A006E;font-weight:500}
+.total-row{background:var(--color-background-secondary)}
+.total-row td{font-weight:500;color:var(--color-text-primary) !important;border-top:0.5px solid var(--color-border-secondary)}
+.grand-total{background:#C8121E}
+.grand-total td{color:#fff !important;font-weight:500;font-size:13px}
+.grand-total td:nth-child(2),.grand-total td:nth-child(3),.grand-total td:nth-child(4){color:#fff !important}
+
+/* Summary cards */
+.sum-card{background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:.9rem;text-align:center}
+.sum-card .sv{font-size:20px;font-weight:500;margin-bottom:3px}
+.sum-card .sl2{font-size:11px;color:var(--color-text-tertiary);line-height:1.4}
+.sum-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin-bottom:1rem}
+
+@media(max-width:560px){.g2,.g3{grid-template-columns:1fr}.kpi-grid .stretch{display:none}}
+</style>
+
+<div class="w">
+<div class="nav-wrap">
+  <div class="nav">
+    <button class="nb on" onclick="go('kpi-approach',this)">KPI approach</button>
+    <button class="nb" onclick="go('linkedin-kpis',this)">LinkedIn KPIs</button>
+    <button class="nb" onclick="go('meta-kpis',this)">Facebook/Instagram KPIs</button>
+    <button class="nb" onclick="go('google-kpis',this)">Google KPIs</button>
+    <button class="nb" onclick="go('pipeline-kpis',this)">Pipeline KPIs</button>
+    <button class="nb" onclick="go('budget',this)">Full budget</button>
+    <button class="nb" onclick="go('totals',this)">Investment summary</button>
+  </div>
+</div>
+
+<!-- KPI APPROACH -->
+<div id="p-kpi-approach" class="pg on">
+  <div class="lbl">KPI philosophy</div>
+  <div class="h1">We promise what the industry average delivers.<br>We plan to significantly exceed it.</div>
+  <p class="body" style="margin-bottom:1rem">Every KPI presented to Longhorn in this document is set at or below global industry average benchmarks for financial services in emerging markets. This is deliberate. The targets we commit to publicly are the floor. The targets we work to internally are materially higher. This protects the client relationship, gives BridgeCom room to demonstrate genuine over-performance, and ensures every milestone reported is a credible, comparable number rather than an optimistic projection.</p>
+
+  <div class="alert alert-n">
+    <p><strong>Internal working principle:</strong> The numbers in the "Our commitment" column are what we put in the contract and report against every month. The numbers in the "Internal stretch" column are what the team works to hit. If we meet our commitment but miss our internal stretch, that is still a good month. If we meet both, that is a great month we report with context. If we miss our commitment, that is a serious conversation with a clear recovery plan.</p>
+  </div>
+
+  <div class="div"></div>
+  <div class="lbl">How we set the benchmarks</div>
+
+  <div class="g2">
+    <div>
+      <div class="ca ca-n" style="margin-bottom:.6rem">
+        <div class="h3">Source data used</div>
+        <p class="body" style="margin-top:3px">Global benchmarks from WordStream (1,000+ campaigns), Sprout Social (cross-network 2025 data), LinkedIn official CPL data for financial services, Flyweel CPL index (50,000+ businesses), and Deloitte Africa Insurance Outlook 2024/25. Adjusted downward by 40 to 60% for emerging market pricing, which consistently runs at a fraction of US and UK rates due to lower advertiser competition and lower digital ad market maturity.</p>
+      </div>
+      <div class="ca ca-r">
+        <div class="h3">The emerging market adjustment</div>
+        <p class="body" style="margin-top:3px">Research from LeadSync and WordStream confirms that leads from emerging markets (including sub-Saharan Africa) cost 2 to 3x less than US and UK equivalents. Zambia sits in a particularly low-competition digital advertising environment, which means CPLs will be lower than even regional African averages in the early months before the market matures. We use South African benchmarks as our upper ceiling and adjust down for Zambia's lower competition environment.</p>
+      </div>
+    </div>
+    <div>
+      <div class="h2" style="margin-bottom:.6rem">How to read the KPI tables</div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:.75rem">
+        <div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:.6rem .85rem;flex:1;min-width:130px">
+          <div class="small" style="font-weight:500;margin-bottom:3px">Global industry average</div>
+          <div class="small">What financial services brands achieve globally. This is public benchmark data. Verifiable by any third party.</div>
+        </div>
+        <div style="background:#FAEEDA;border-radius:var(--border-radius-md);padding:.6rem .85rem;flex:1;min-width:130px">
+          <div class="small" style="font-weight:500;margin-bottom:3px;color:#633806">Our commitment to Longhorn</div>
+          <div class="small">What we put in writing. At or slightly above the emerging market adjusted average. Conservative. Credible. Contractual.</div>
+        </div>
+        <div style="background:#EAF3DE;border-radius:var(--border-radius-md);padding:.6rem .85rem;flex:1;min-width:130px">
+          <div class="small" style="font-weight:500;margin-bottom:3px;color:#27500A">Internal stretch target</div>
+          <div class="small">What BridgeCom's team works to achieve. Not shared with the client in reporting. The bar we hold ourselves to internally.</div>
+        </div>
+      </div>
+      <div class="alert alert-g" style="margin-bottom:0">
+        <p><strong>Why this matters commercially:</strong> An agency that over-promises and under-delivers loses the client at month three. An agency that under-promises and over-delivers earns trust, earns renewals, and earns referrals. The latter is the only commercially sustainable model. These KPIs are built for the long relationship, not the winning pitch.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- LINKEDIN KPIs -->
+<div id="p-linkedin-kpis" class="pg">
+  <div class="lbl">LinkedIn KPIs</div>
+  <div class="h1">B2B decision-maker acquisition.<br>Higher cost, highest quality.</div>
+
+  <div class="alert alert-n">
+    <p><strong>Benchmark context:</strong> Global LinkedIn CPL for financial services averages $100 to $250 (approximately ZMW 2,800 to 7,000) per lead according to AxZLead and Sopro data. Zambia's lower advertiser competition means realistic CPL of ZMW 800 to 2,000 in the early months, rising as the market matures. LinkedIn Lead Gen Forms achieve an average 13% conversion rate globally, versus 2.35% for standard landing pages. We use 8% as our commitment baseline, leaving genuine room to over-deliver.</p>
+  </div>
+
+  <table class="kpi-grid">
+    <thead><tr><th>Metric</th><th>Global industry avg</th><th style="color:#BA7517">Our commitment</th><th style="color:#27500A">Internal stretch</th><th>Milestone</th></tr></thead>
+    <tbody>
+      <tr><td>Company page followers</td><td>Varies widely</td><td class="ind-avg">200 by M6 / 600 by M12</td><td class="our-target">400 by M6 / 1,200 by M12</td><td>M6 / M12</td></tr>
+      <tr><td>Leadership post average reach</td><td>400 to 600 per post (financial services, EMEA)</td><td class="ind-avg">300 per post by M6</td><td class="our-target">800+ per post by M6</td><td>M6</td></tr>
+      <tr><td>Lead Gen Form conversion rate</td><td>13% global avg (Sopro 2025)</td><td class="ind-avg">8% conversion rate</td><td class="our-target">14%+</td><td>M4 onwards</td></tr>
+      <tr><td>Cost per LinkedIn lead (ZMW)</td><td>ZMW 2,800 to 7,000 (global financial services)</td><td class="ind-avg">ZMW 1,500 to 2,500</td><td class="our-target">ZMW 800 to 1,400</td><td>M4 onwards</td></tr>
+      <tr><td>LinkedIn lead volume per month</td><td>Varies by budget</td><td class="ind-avg">4 to 8 leads/month</td><td class="our-target">10 to 18 leads/month</td><td>M6 onwards</td></tr>
+      <tr><td>Sponsored content CTR</td><td>0.44 to 0.65% global avg</td><td class="ind-avg">0.4%</td><td class="our-target">0.7%+</td><td>M4 onwards</td></tr>
+      <tr><td>Profile views (leadership team)</td><td>Benchmark varies</td><td class="ind-avg">200+/month per profile by M6</td><td class="our-target">600+/month per profile by M6</td><td>M6</td></tr>
+    </tbody>
+  </table>
+
+  <div class="ca ca-g" style="margin-top:.5rem">
+    <div class="h3">Why LinkedIn leads justify the higher cost</div>
+    <p class="body" style="margin-top:3px">A single LinkedIn lead that becomes a corporate group policy generates K 40,000 to K 120,000+ in annual premiums through Longhorn. Even at our commitment CPL of ZMW 2,500, converting one in ten LinkedIn leads to a consultation and one in four consultations to a policy means each policy costs approximately ZMW 100,000 to acquire, against revenue of K 40,000 to K 120,000 per year. The CPL is never evaluated in isolation. It is evaluated against the lifetime value of the client it produces.</p>
+  </div>
+</div>
+
+<!-- FACEBOOK/INSTAGRAM KPIs -->
+<div id="p-meta-kpis" class="pg">
+  <div class="lbl">Facebook and Instagram KPIs</div>
+  <div class="h1">Retail and trust engine.<br>High volume, lower CPL, longer nurture.</div>
+
+  <div class="alert alert-r">
+    <p><strong>Benchmark context:</strong> WordStream 2025 data puts global Facebook CPL for finance and insurance at $41 to $75 (approximately ZMW 1,150 to 2,100). South African data from SuperAds shows a median CPL of under $4 in normal months (approximately ZMW 110), with spikes. For Zambia, with low advertiser competition, we expect Facebook CPL to sit between ZMW 150 and 500 in early months. Social engagement benchmarks for financial services on Facebook average 2 to 3%. We commit to 2.5% and target 4.5% internally. Sprout Social 2025 data confirms Facebook and Instagram engagements grew 9% and 28% respectively year on year.</p>
+  </div>
+
+  <table class="kpi-grid">
+    <thead><tr><th>Metric</th><th>Global industry avg</th><th style="color:#BA7517">Our commitment</th><th style="color:#27500A">Internal stretch</th><th>Milestone</th></tr></thead>
+    <tbody>
+      <tr><td>Facebook page followers</td><td>Varies widely</td><td class="ind-avg">800 by M6 / 2,500 by M12</td><td class="our-target">1,500 by M6 / 4,500 by M12</td><td>M6 / M12</td></tr>
+      <tr><td>Instagram followers</td><td>Varies widely</td><td class="ind-avg">400 by M6 / 1,200 by M12</td><td class="our-target">800 by M6 / 2,500 by M12</td><td>M6 / M12</td></tr>
+      <tr><td>Average post engagement rate (Facebook)</td><td>2 to 3% financial services (Sprout 2025)</td><td class="ind-avg">2.5%</td><td class="our-target">4.5%+</td><td>M3 onwards</td></tr>
+      <tr><td>Average post engagement rate (Instagram)</td><td>3 to 5% financial services</td><td class="ind-avg">3%</td><td class="our-target">5.5%+</td><td>M3 onwards</td></tr>
+      <tr><td>Cost per Facebook lead (ZMW)</td><td>ZMW 1,150 to 2,100 (global); ZMW 110 median South Africa</td><td class="ind-avg">ZMW 300 to 600</td><td class="our-target">ZMW 120 to 280</td><td>M4 onwards</td></tr>
+      <tr><td>Facebook/Instagram lead volume per month</td><td>Varies by budget</td><td class="ind-avg">10 to 20 leads/month</td><td class="our-target">25 to 45 leads/month</td><td>M6 onwards</td></tr>
+      <tr><td>Facebook Lead Form conversion rate</td><td>8 to 12% (Meta internal data)</td><td class="ind-avg">7%</td><td class="our-target">13%+</td><td>M4 onwards</td></tr>
+      <tr><td>Video content views (per Reel/video post)</td><td>Varies widely</td><td class="ind-avg">500 views by M6</td><td class="our-target">1,500+ views by M6</td><td>M6</td></tr>
+      <tr><td>WhatsApp broadcast open rate</td><td>35 to 45% (opt-in lists, industry data)</td><td class="ind-avg">40%</td><td class="our-target">62%+</td><td>M4 onwards</td></tr>
+      <tr><td>WhatsApp broadcast subscribers</td><td>Benchmark varies</td><td class="ind-avg">300 by M6 / 700 by M12</td><td class="our-target">600 by M6 / 1,200 by M12</td><td>M6 / M12</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- GOOGLE KPIs -->
+<div id="p-google-kpis" class="pg">
+  <div class="lbl">Google Ads and SEO KPIs</div>
+  <div class="h1">Intent capture.<br>Highest conversion rate, lowest volume.</div>
+
+  <div class="alert alert-g">
+    <p><strong>Benchmark context:</strong> Global Google Ads CPL averages $66 to $70 (approximately ZMW 1,850 to 1,960) across industries, with financial services at the higher end. Zambia's low advertiser competition on insurance-related keywords means CPL of ZMW 600 to 1,500 is achievable early on. Google Search average CTR across all industries is 3.17%. Financial services average 2.65%. Landing page conversion rates for financial services average 5 to 7%. We commit to 4% and target 9% internally. Google leads convert to consultations at roughly double the rate of social leads because of purchase intent.</p>
+  </div>
+
+  <table class="kpi-grid">
+    <thead><tr><th>Metric</th><th>Global industry avg</th><th style="color:#BA7517">Our commitment</th><th style="color:#27500A">Internal stretch</th><th>Milestone</th></tr></thead>
+    <tbody>
+      <tr><td>Google Search CTR</td><td>2.65% financial services (WordStream)</td><td class="ind-avg">2%</td><td class="our-target">3.5%+</td><td>M3 onwards</td></tr>
+      <tr><td>Landing page conversion rate</td><td>5 to 7% financial services</td><td class="ind-avg">4%</td><td class="our-target">9%+</td><td>M3 onwards</td></tr>
+      <tr><td>Cost per Google enquiry (ZMW)</td><td>ZMW 1,850 to 1,960 (global avg)</td><td class="ind-avg">ZMW 800 to 1,500</td><td class="our-target">ZMW 400 to 750</td><td>M3 onwards</td></tr>
+      <tr><td>Google Ads enquiries per month</td><td>Varies by budget</td><td class="ind-avg">3 to 6/month by M6</td><td class="our-target">8 to 15/month by M6</td><td>M6</td></tr>
+      <tr><td>Quality Score (average across campaigns)</td><td>Industry average 5 to 6 out of 10</td><td class="ind-avg">6 out of 10</td><td class="our-target">8+ out of 10</td><td>M4 onwards</td></tr>
+      <tr><td>Organic search impressions (monthly)</td><td>Depends on SEO investment</td><td class="ind-avg">500 by M6 / 2,000 by M12</td><td class="our-target">1,200 by M6 / 5,000 by M12</td><td>M6 / M12</td></tr>
+      <tr><td>Organic keywords ranking page 1</td><td>Depends on SEO investment</td><td class="ind-avg">2 to 3 by M12</td><td class="our-target">6 to 10 by M12</td><td>M12</td></tr>
+      <tr><td>Website sessions per month</td><td>Depends on sector and spend</td><td class="ind-avg">400 by M6 / 1,200 by M12</td><td class="our-target">900 by M6 / 2,800 by M12</td><td>M6 / M12</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- PIPELINE KPIs -->
+<div id="p-pipeline-kpis" class="pg">
+  <div class="lbl">Pipeline and commercial KPIs</div>
+  <div class="h1">From enquiry to signed policy.<br>The numbers that connect marketing to revenue.</div>
+
+  <div class="alert alert-a">
+    <p><strong>Benchmark context:</strong> Insurance industry global benchmarks (Salesforce State of Sales, HubSpot Insurance Benchmarks 2024) show enquiry-to-consultation conversion rates of 5 to 8% for cold digital leads, rising to 12 to 18% with strong nurture sequences. Consultation-to-policy rates in financial services broker models average 15 to 22% globally. We commit to 5% enquiry-to-consultation and 15% consultation-to-policy. Our internal targets are 12% and 25% respectively, consistent with well-run broker operations that apply structured follow-up. Referral leads historically convert at 2 to 3x the rate of cold digital leads across all industries.</p>
+  </div>
+
+  <table class="kpi-grid">
+    <thead><tr><th>Metric</th><th>Global industry avg</th><th style="color:#BA7517">Our commitment</th><th style="color:#27500A">Internal stretch</th><th>Milestone</th></tr></thead>
+    <tbody>
+      <tr><td>Total enquiries per month (all channels)</td><td>Varies by budget and market</td><td class="ind-avg">15 by M6 / 35 by M12</td><td class="our-target">30 by M6 / 65 by M12</td><td>M6 / M12</td></tr>
+      <tr><td>Enquiry to consultation conversion rate</td><td>5 to 8% cold digital leads (Salesforce 2024)</td><td class="ind-avg">5%</td><td class="our-target">12%+</td><td>M4 onwards</td></tr>
+      <tr><td>Consultation to policy conversion rate</td><td>15 to 22% financial services broker (HubSpot 2024)</td><td class="ind-avg">15%</td><td class="our-target">25%+</td><td>M4 onwards</td></tr>
+      <tr><td>Enquiry response time (automated)</td><td>Best practice: under 5 minutes</td><td class="ind-avg">Under 90 seconds</td><td class="our-target">Under 45 seconds</td><td>From day 1</td></tr>
+      <tr><td>Broker first contact after enquiry (human)</td><td>Industry best practice: under 2 hours</td><td class="ind-avg">Under 3 hours (A-leads)</td><td class="our-target">Under 60 minutes (A-leads)</td><td>From M1</td></tr>
+      <tr><td>Active referral partners</td><td>Benchmark varies</td><td class="ind-avg">2 by M6 / 4 by M12</td><td class="our-target">4 by M6 / 7 by M12</td><td>M6 / M12</td></tr>
+      <tr><td>Referral-sourced enquiries per month</td><td>Referrals convert 2 to 3x higher than cold leads</td><td class="ind-avg">2 to 4 by M6</td><td class="our-target">6 to 12 by M6</td><td>M6</td></tr>
+      <tr><td>Nurture sequence open rate (WhatsApp)</td><td>35 to 45% opt-in WhatsApp lists</td><td class="ind-avg">38%</td><td class="our-target">58%+</td><td>M3 onwards</td></tr>
+      <tr><td>Policies from digital channels per month</td><td>Varies entirely by funnel quality</td><td class="ind-avg">1 to 3 by M6 / 5 to 10 by M12</td><td class="our-target">4 to 7 by M6 / 12 to 20 by M12</td><td>M6 / M12</td></tr>
+      <tr><td>Monthly premium revenue (digital-sourced, ZMW)</td><td>Varies entirely by product mix</td><td class="ind-avg">K 20,000+ by M6 / K 80,000+ by M12</td><td class="our-target">K 50,000+ by M6 / K 200,000+ by M12</td><td>M6 / M12</td></tr>
+    </tbody>
+  </table>
+
+  <div class="div"></div>
+  <div class="lbl">CSR and brand KPIs</div>
+  <table class="kpi-grid">
+    <thead><tr><th>Metric</th><th>Rationale</th><th style="color:#BA7517">Our commitment</th><th style="color:#27500A">Internal stretch</th><th>Milestone</th></tr></thead>
+    <tbody>
+      <tr><td>Bursary applications received</td><td>Measures community reach and programme credibility</td><td class="ind-avg">10+ year 1</td><td class="our-target">25+</td><td>M3</td></tr>
+      <tr><td>Press placements (earned media)</td><td>Measures PR effectiveness</td><td class="ind-avg">4 per year</td><td class="our-target">10+ per year</td><td>Annual</td></tr>
+      <tr><td>SME workshop attendees</td><td>Direct pipeline metric</td><td class="ind-avg">30 per session</td><td class="our-target">55+ per session</td><td>Each session</td></tr>
+      <tr><td>Workshop to enquiry conversion</td><td>Quality of activation-sourced pipeline</td><td class="ind-avg">8%</td><td class="our-target">18%+</td><td>M4 onwards</td></tr>
+      <tr><td>Brand awareness lift (Lusaka survey)</td><td>Baseline survey M1, repeat M12</td><td class="ind-avg">10% lift by M12</td><td class="our-target">20%+ lift by M12</td><td>M12</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- FULL BUDGET -->
+<div id="p-budget" class="pg">
+  <div class="lbl">Full agency budget</div>
+  <div class="h1">Every cost. Transparent and justified.<br>Nothing hidden. Nothing assumed.</div>
+  <p class="body" style="margin-bottom:1rem">This budget covers everything required to execute this plan from a zero starting point through the first twelve months. It is organised into five categories: one-off setup costs (paid once), monthly retainer services (ongoing agency fees), technology and tool subscriptions, advertising media spend (paid directly to platforms), and production costs. All figures are in Zambian Kwacha (ZMW). Exchange rate basis: 1 USD = approximately ZMW 28.</p>
+
+  <div class="alert alert-n">
+    <p><strong>How to use this budget:</strong> The setup costs are charged in Months 1 and 2. The monthly retainer begins from Month 2. Advertising spend begins from Month 3. Total year-one investment is the sum of all categories. The client retains ownership of all accounts, all creative assets, the website, and the CRM at all times. If the engagement ends, nothing is held by BridgeCom.</p>
+  </div>
+
+  <!-- SECTION 1: ONE-OFF SETUP -->
+  <div class="budget-section">
+    <div class="budget-section-title">Section 1: One-off setup costs (charged months 1 to 2)</div>
+    <table class="budget-table">
+      <thead><tr><th>Line item</th><th>Low estimate</th><th>High estimate</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr class="setup-row"><td>Website design (front end, delivered to client's developer)</td><td>K 18,000</td><td>K 28,000</td><td class="note-cell">Full UI/UX design in Figma or similar. 7 to 10 pages including product landing pages. Responsive for mobile. BridgeCom delivers the design file. Client's developer builds and hosts it.</td></tr>
+        <tr><td>Website copywriting (all pages)</td><td>K 4,500</td><td>K 7,000</td><td class="note-cell">Homepage, about, 4 product pages, contact, privacy. Behavioural framing applied throughout. SEO-optimised.</td></tr>
+        <tr class="setup-row"><td>Brand voice document and content standards guide</td><td>K 3,500</td><td>K 5,500</td><td class="note-cell">Tone of voice guidelines, writing do's and don'ts, approved product descriptions, example post formats. Used by all content creators.</td></tr>
+        <tr><td>Social media profile design (all 4 platforms)</td><td>K 3,000</td><td>K 4,500</td><td class="note-cell">Facebook, Instagram, LinkedIn, WhatsApp Business. Profile images, cover images, bio copy, link-in-bio setup.</td></tr>
+        <tr class="setup-row"><td>CRM setup and configuration (HubSpot or Zoho)</td><td>K 5,500</td><td>K 8,500</td><td class="note-cell">Pipeline stages built. Lead scoring rules configured. Web forms connected. Email sequences loaded. WhatsApp integration set up. Training for Longhorn team included.</td></tr>
+        <tr><td>WhatsApp Business automation setup</td><td>K 2,500</td><td>K 4,000</td><td class="note-cell">Auto-reply sequences, quick reply templates, broadcast list setup, click-to-WhatsApp ad integration. Includes 22-day nurture sequence build.</td></tr>
+        <tr class="setup-row"><td>Analytics and tracking stack</td><td>K 2,800</td><td>K 4,200</td><td class="note-cell">Google Analytics 4, Meta Pixel, LinkedIn Insight Tag, conversion tracking on all landing pages. Google Tag Manager setup. Looker Studio dashboard built.</td></tr>
+        <tr><td>Bursary programme design and launch kit</td><td>K 3,200</td><td>K 5,000</td><td class="note-cell">Application form design, selection criteria document, school partner brief, ceremony run-of-show, press release template, photography brief for ceremony day.</td></tr>
+        <tr class="setup-row"><td>Initial content library (first 20 posts, graphics and copy)</td><td>K 5,500</td><td>K 8,000</td><td class="note-cell">20 branded content pieces covering all 8 themes. Enough to populate all platforms for the first 5 weeks without additional production time.</td></tr>
+        <tr><td>LinkedIn profile optimisation (leadership team, up to 3 profiles)</td><td>K 2,000</td><td>K 3,500</td><td class="note-cell">Headline rewrites, about section, featured posts, banner images. Each profile positioned as a thought leader, not a job listing.</td></tr>
+        <tr class="total-row"><td>Section 1 total</td><td>K 50,500</td><td>K 78,200</td><td class="note-cell">Paid in months 1 and 2. One-off investment.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- SECTION 2: MONTHLY RETAINER -->
+  <div class="budget-section">
+    <div class="budget-section-title">Section 2: Monthly agency retainer (from month 2, ongoing)</div>
+    <table class="budget-table">
+      <thead><tr><th>Line item</th><th>Monthly low</th><th>Monthly high</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr class="setup-row"><td>Account strategy and client management</td><td>K 6,500</td><td>K 9,000</td><td class="note-cell">Senior strategist time. Campaign planning, briefing, quality control, monthly CEO review presentation, weekly pipeline report narrative. The brain of the operation.</td></tr>
+        <tr><td>Content creation: copywriting (all platforms)</td><td>K 5,500</td><td>K 8,000</td><td class="note-cell">All written content: post captions, carousel copy, WhatsApp messages, email nurture sequences, LinkedIn articles, blog posts. 18 to 25 pieces per month.</td></tr>
+        <tr class="setup-row"><td>Content creation: graphic design</td><td>K 4,000</td><td>K 6,500</td><td class="note-cell">Static post graphics, carousel slide design, ad creative, WhatsApp broadcast graphics, infographics. Consistent brand system applied throughout.</td></tr>
+        <tr><td>Performance marketing management (paid campaigns)</td><td>K 5,500</td><td>K 8,000</td><td class="note-cell">LinkedIn, Facebook, Instagram and Google campaign management. Audience targeting, bid management, A/B testing, CPL optimisation, weekly performance reporting. Begins month 3.</td></tr>
+        <tr class="setup-row"><td>Community management and social listening</td><td>K 2,500</td><td>K 3,500</td><td class="note-cell">Daily monitoring of all platforms. Responding to comments and messages within SLA. Flagging opportunities (comments that indicate buying intent). Engaging with relevant industry conversations on LinkedIn.</td></tr>
+        <tr><td>PR and media relations</td><td>K 2,500</td><td>K 4,000</td><td class="note-cell">Quarterly op-ed placement, radio pitch and liaison, press release distribution, journalist relationship management. Longhorn leadership briefed before all media appearances.</td></tr>
+        <tr class="setup-row"><td>SEO management and content</td><td>K 3,000</td><td>K 5,000</td><td class="note-cell">2 SEO-optimised articles per month. Keyword tracking, backlink outreach, Google Search Console monitoring. Begins month 2.</td></tr>
+        <tr><td>WhatsApp broadcast content and scheduling</td><td>K 1,500</td><td>K 2,500</td><td class="note-cell">Weekly broadcast content: written, designed, and scheduled. Subscriber list management. Monthly broadcast performance analysis.</td></tr>
+        <tr class="setup-row"><td>Analytics reporting and dashboard maintenance</td><td>K 2,000</td><td>K 3,500</td><td class="note-cell">Weekly pipeline report (6 numbers). Monthly full performance review deck. Quarterly strategy review with CEO. Dashboard kept live and accurate at all times.</td></tr>
+        <tr><td>CSR programme support (school programme, workshops)</td><td>K 2,500</td><td>K 4,000</td><td class="note-cell">Workshop facilitation support, school liaison, proof story production, bursary ceremony content and PR, student journey content creation.</td></tr>
+        <tr class="total-row"><td>Monthly retainer total</td><td>K 35,500</td><td>K 54,000</td><td class="note-cell">Per month from month 2. Minimum commitment: 6 months.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- SECTION 3: TOOLS AND SUBSCRIPTIONS -->
+  <div class="budget-section">
+    <div class="budget-section-title">Section 3: Technology and tool subscriptions (annual, paid by client)</div>
+    <table class="budget-table">
+      <thead><tr><th>Tool / subscription</th><th>Annual low</th><th>Annual high</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr class="setup-row"><td>CRM platform (HubSpot Starter or Zoho CRM Standard)</td><td>K 4,200</td><td>K 7,500</td><td class="note-cell">HubSpot Starter: approx $20/month. Zoho CRM Standard: approx $14/month. Client owns the account. BridgeCom has agency access. Includes lead tracking, pipeline management, email sequences.</td></tr>
+        <tr><td>WhatsApp Business API (via Twilio or similar)</td><td>K 2,800</td><td>K 5,000</td><td class="note-cell">Required for automation and broadcast beyond WhatsApp Business standard limits. Enables automated sequences and CRM integration. Per-message costs apply on top.</td></tr>
+        <tr class="setup-row"><td>Social media scheduling tool (Buffer Pro or Later)</td><td>K 1,680</td><td>K 2,800</td><td class="note-cell">Buffer Pro: approx $15/month. Covers all four platforms. Content calendar visibility shared with client for approval before anything is posted.</td></tr>
+        <tr><td>Design tool (Canva Pro, team account)</td><td>K 1,680</td><td>K 2,520</td><td class="note-cell">Canva Pro team: approx $13/month. Brand kit set up with Longhorn colours, fonts, and logo. All brand assets stored and accessible.</td></tr>
+        <tr class="setup-row"><td>SEO and keyword tracking (SemRush Starter or Ubersuggest)</td><td>K 2,800</td><td>K 5,600</td><td class="note-cell">SemRush Starter: approx $139/month (discounted annual plan approx $100/month). Keyword tracking, competitor monitoring, backlink analysis. Can use Ubersuggest at lower cost.</td></tr>
+        <tr><td>Google Analytics 4 and Google Search Console</td><td>K 0</td><td>K 0</td><td class="note-cell">Free. Client creates account. BridgeCom has access. No cost.</td></tr>
+        <tr class="setup-row"><td>Google Looker Studio (reporting dashboard)</td><td>K 0</td><td>K 0</td><td class="note-cell">Free. BridgeCom builds and maintains the dashboard. Shared with client. No cost.</td></tr>
+        <tr><td>Email platform for nurture sequences (Mailchimp Essentials or HubSpot included)</td><td>K 1,120</td><td>K 2,800</td><td class="note-cell">If using HubSpot CRM, email sequences are included. If separate, Mailchimp Essentials approx $13/month for up to 5,000 contacts.</td></tr>
+        <tr class="setup-row"><td>Zapier (automation: lead forms to CRM)</td><td>K 1,344</td><td>K 2,800</td><td class="note-cell">Zapier Starter: approx $20/month. Connects Facebook Lead Ads, LinkedIn Lead Gen Forms, and the website form directly to the CRM. Eliminates manual data entry entirely.</td></tr>
+        <tr><td>Project management and client comms (Notion or Asana)</td><td>K 0</td><td>K 1,120</td><td class="note-cell">Notion team plan at approx $8/month per user. Used for shared content calendar, approval workflows, and campaign briefs. Notion free plan is sufficient for smaller teams.</td></tr>
+        <tr><td>Video storage and hosting (Vimeo or YouTube)</td><td>K 0</td><td>K 1,120</td><td class="note-cell">YouTube: free. Vimeo Basic: free. Vimeo Pro if required for branded hosting: approx $20/month. Recommend YouTube for maximum organic reach at zero cost.</td></tr>
+        <tr class="total-row"><td>Annual tools and subscriptions total</td><td>K 15,624</td><td>K 31,260</td><td class="note-cell">Annual cost. Paid directly by client. BridgeCom manages setup and access.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- SECTION 4: AD SPEND -->
+  <div class="budget-section">
+    <div class="budget-section-title">Section 4: Advertising media spend (paid directly to platforms, from month 3)</div>
+    <table class="budget-table">
+      <thead><tr><th>Platform and campaign type</th><th>Monthly low</th><th>Monthly high</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr class="setup-row"><td>LinkedIn: Lead Gen campaigns (B2B decision-makers)</td><td>K 2,800</td><td>K 5,600</td><td class="note-cell">Targeting HR managers, CFOs, and business owners in Lusaka by job title and company size. Lead Gen Form format. Minimum effective budget on LinkedIn is approximately USD 100/month.</td></tr>
+        <tr><td>LinkedIn: Thought leadership post amplification</td><td>K 1,120</td><td>K 2,240</td><td class="note-cell">Boosting best-performing organic leadership posts to a broader professional Lusaka audience. Builds authority that makes the Lead Gen campaigns more effective.</td></tr>
+        <tr class="setup-row"><td>Facebook: Lead Gen ads (retail and SME audience)</td><td>K 2,800</td><td>K 5,600</td><td class="note-cell">Targeting Lusaka professionals aged 25 to 50. Insurance health check lead magnet. Retargeting pool for warm audience. Budget split: 60% cold, 40% retarget.</td></tr>
+        <tr><td>Instagram: Reel and story ads</td><td>K 1,120</td><td>K 2,800</td><td class="note-cell">Short-form video ads and story ads targeting 22 to 38 professional Lusaka audience. Visual credibility building. Click-to-WhatsApp format.</td></tr>
+        <tr class="setup-row"><td>Google Search: Broker and product intent campaigns</td><td>K 2,240</td><td>K 4,480</td><td class="note-cell">Three campaigns: broker intent, product intent, problem-aware. Target keywords: "insurance broker Lusaka", "motor insurance Zambia", "business insurance Lusaka". Dedicated landing pages per campaign.</td></tr>
+        <tr><td>Google Display: Retargeting non-converting website visitors</td><td>K 560</td><td>K 1,400</td><td class="note-cell">30-day retargeting window for people who visited a landing page but did not submit a form. Very low CPM in the Zambian market.</td></tr>
+        <tr class="setup-row"><td>Organic post boosting (Facebook and Instagram, best performers only)</td><td>K 1,120</td><td>K 2,240</td><td class="note-cell">Best-performing organic posts from the week are boosted on Monday. Budget allocated based on organic engagement signal. Not all posts are boosted. Only posts that have already demonstrated audience interest.</td></tr>
+        <tr class="total-row"><td>Monthly ad spend total</td><td>K 11,760</td><td>K 24,360</td><td class="note-cell">Paid directly by client to platforms. BridgeCom manages and optimises spend. Not marked up.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- SECTION 5: PRODUCTION -->
+  <div class="budget-section">
+    <div class="budget-section-title">Section 5: Video and production costs (as required)</div>
+    <table class="budget-table">
+      <thead><tr><th>Production item</th><th>Per unit low</th><th>Per unit high</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr class="setup-row"><td>Short-form broker video (60 sec, talking head format)</td><td>K 1,200</td><td>K 2,500</td><td class="note-cell">Local Lusaka videographer. Single location, single broker. Edit includes captions and brand intro/outro. Recommended: 2 per month minimum. This is the highest-performing content format on both Instagram and Facebook.</td></tr>
+        <tr><td>Client testimonial video (2 to 3 min)</td><td>K 1,800</td><td>K 3,500</td><td class="note-cell">Filmed at client's premises where possible. Natural setting, not a studio. Edit includes full version for website and 60-second cut for social. One per month from month 3 onwards.</td></tr>
+        <tr class="setup-row"><td>Bursary ceremony video (professional edit, 2 min)</td><td>K 2,500</td><td>K 4,500</td><td class="note-cell">Professional videographer for ceremony day. Full edited film plus social cut. Core content asset used across multiple platforms for 12+ months.</td></tr>
+        <tr><td>SME workshop event documentation</td><td>K 800</td><td>K 1,800</td><td class="note-cell">Photographer and brief video for each workshop. Images used in social content, press releases, and on the website. Per quarterly workshop event.</td></tr>
+        <tr class="setup-row"><td>Cover Check roadshow event documentation</td><td>K 1,200</td><td>K 2,500</td><td class="note-cell">Photographer and short behind-the-scenes video per roadshow. Social content generated same day. Per quarterly event.</td></tr>
+        <tr><td>Photography: broker team portraits and office</td><td>K 2,500</td><td>K 4,500</td><td class="note-cell">One half-day shoot. Professional portraits of all named brokers, office images for website and social. One-off cost, images used for 12+ months.</td></tr>
+        <tr class="setup-row"><td>Motion graphics and animation (for ad creative)</td><td>K 1,500</td><td>K 3,000</td><td class="note-cell">Per animated post or ad. Used for high-performance paid creative. Not all content requires animation. Estimated 1 to 2 per month from month 4.</td></tr>
+        <tr class="total-row"><td>Estimated annual production total</td><td>K 45,600</td><td>K 90,000</td><td class="note-cell">Based on recommended production cadence. Actual cost depends on volume approved each month.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- INVESTMENT SUMMARY -->
+<div id="p-totals" class="pg">
+  <div class="lbl">Investment summary</div>
+  <div class="h1">The full picture.<br>Every kwacha accounted for.</div>
+  <p class="body" style="margin-bottom:1rem">The tables below consolidate all five cost categories into a total year-one investment range. Costs are separated by who pays what: setup and retainer are invoiced by BridgeCom; tools are paid directly by Longhorn to each platform; ad spend is paid directly by Longhorn to the advertising platforms and not marked up by BridgeCom.</p>
+
+  <div class="sum-cards">
+    <div class="sum-card"><div class="sv" style="color:#C8121E">K 50,500 to K 78,200</div><div class="sl2">One-off setup costs, months 1 to 2. Paid to BridgeCom.</div></div>
+    <div class="sum-card"><div class="sv" style="color:#0A006E">K 35,500 to K 54,000</div><div class="sl2">Monthly retainer per month from month 2. Paid to BridgeCom.</div></div>
+    <div class="sum-card"><div class="sv" style="color:#27500A">K 15,624 to K 31,260</div><div class="sl2">Annual tools and subscriptions. Paid directly by Longhorn to platforms.</div></div>
+    <div class="sum-card"><div class="sv" style="color:#BA7517">K 11,760 to K 24,360</div><div class="sl2">Monthly ad spend from month 3. Paid directly by Longhorn to advertising platforms.</div></div>
+    <div class="sum-card"><div class="sv" style="color:#533806">K 45,600 to K 90,000</div><div class="sl2">Annual video and production costs. Recommended volume. Invoiced per shoot.</div></div>
+  </div>
+
+  <div class="budget-section">
+    <div class="budget-section-title">Year-one total investment consolidation</div>
+    <table class="budget-table">
+      <thead><tr><th>Category</th><th>Annual low (ZMW)</th><th>Annual high (ZMW)</th><th>Paid to</th></tr></thead>
+      <tbody>
+        <tr class="setup-row"><td>One-off setup (months 1 to 2)</td><td>K 50,500</td><td>K 78,200</td><td class="note-cell">BridgeCom Narratives Ltd</td></tr>
+        <tr><td>Monthly retainer x 11 months (months 2 to 12)</td><td>K 390,500</td><td>K 594,000</td><td class="note-cell">BridgeCom Narratives Ltd</td></tr>
+        <tr class="setup-row"><td>Technology and tool subscriptions</td><td>K 15,624</td><td>K 31,260</td><td class="note-cell">Direct to each platform (HubSpot, Buffer, Canva, etc.)</td></tr>
+        <tr><td>Advertising media spend x 10 months (months 3 to 12)</td><td>K 117,600</td><td>K 243,600</td><td class="note-cell">Direct to LinkedIn, Meta, and Google</td></tr>
+        <tr class="setup-row"><td>Video and production</td><td>K 45,600</td><td>K 90,000</td><td class="note-cell">Local production partners. Managed by BridgeCom.</td></tr>
+        <tr class="grand-total"><td>Year-one total investment range</td><td>K 619,824</td><td>K 1,037,060</td><td>Full programme, all channels, all costs</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="g2" style="margin-top:.75rem">
+    <div class="ca ca-n">
+      <div class="h3">Monthly average across year one (all-in)</div>
+      <p class="body" style="margin-top:3px">Dividing the full year-one range by 12 months gives an all-in average of K 51,652 to K 86,422 per month. This includes everything: agency fees, tools, ad spend, and production. This is the number to compare against the revenue the plan is designed to generate.</p>
+    </div>
+    <div class="ca ca-g">
+      <div class="h3">The return case in plain numbers</div>
+      <p class="body" style="margin-top:3px">At our commitment KPIs, 5 to 10 policies signed per month by Month 12, with an average annual premium of K 15,000 per retail policy and K 60,000 per corporate policy, the monthly premium revenue from digital-sourced clients at our commitment target is K 80,000+ by Month 12. That is K 80,000 in new monthly revenue generated by a programme costing K 51,652 to K 86,422 per month. Break-even on the retainer happens within the programme's own output. Everything added through referrals, renewals, and organic compound growth after that is the long-term return.</p>
+    </div>
+  </div>
+
+  <div class="div"></div>
+  <div class="lbl">Payment terms and commercial model</div>
+  <div class="g3">
+    <div class="card">
+      <div class="h3" style="margin-bottom:.4rem">Retainer terms</div>
+      <p class="body">Monthly invoicing. Minimum engagement: 6 months (brand growth takes time; 3-month retainers produce neither results nor learning). Payment due within 15 days of invoice. Ad spend invoiced separately from agency fees and paid directly to platforms by client for full transparency.</p>
+    </div>
+    <div class="card">
+      <div class="h3" style="margin-bottom:.4rem">What the client owns</div>
+      <p class="body">All social media accounts and page admins. The website design files. All CRM data and contacts. All content assets produced during the engagement. All advertising accounts. If the engagement ends, Longhorn takes everything with them. BridgeCom holds nothing.</p>
+    </div>
+    <div class="card">
+      <div class="h3" style="margin-bottom:.4rem">Performance review</div>
+      <p class="body">Monthly review meeting with Longhorn leadership (30 minutes minimum). Quarterly full strategy review (90 minutes, CEO present). If committed KPIs are not met for two consecutive months, BridgeCom presents a formal recovery plan before the third month begins. No hiding. No excuses. A plan.</p>
+    </div>
+  </div>
+</div>
+
+</div>
+<script>
+function go(id,btn){
+  document.querySelectorAll('.pg').forEach(p=>p.classList.remove('on'));
+  document.querySelectorAll('.nb').forEach(b=>b.classList.remove('on'));
+  document.getElementById('p-'+id).classList.add('on');
+  btn.classList.add('on');
+}
+</script>
